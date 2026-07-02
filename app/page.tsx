@@ -4,6 +4,8 @@ import FeaturedExperiences from "../components/FeaturedExperiences";
 import WhyUs from "../components/WhyUs";
 import PopularTours from "../components/PopularTours";
 import Testimonials from "../components/Testimonials";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <WhyUs />
       <PopularTours />
       <Testimonials />
+      <Contact />
+      <Footer />
     </main>
   );
 }

@@ -1,6 +1,6 @@
 export default function Testimonials() {
   return (
-    <section
+    <section id="about"
       style={{
         padding: "100px 40px",
         backgroundColor: "#f8fafc",

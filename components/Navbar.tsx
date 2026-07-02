@@ -29,9 +29,9 @@ export default function Navbar() {
           gap: "20px",
         }}
       >
-        <span>Experiences</span>
-        <span>About</span>
-        <span>Contact</span>
+        <a href="#experiences">Experiences</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
         <span>ES | EN | FR</span>
       </div>
     </nav>

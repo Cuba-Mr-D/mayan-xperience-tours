@@ -1,6 +1,6 @@
 export default function FeaturedExperiences() {
   return (
-    <section
+    <section id="experiences"
       style={{
         padding: "100px 40px",
         backgroundColor: "#ffffff",

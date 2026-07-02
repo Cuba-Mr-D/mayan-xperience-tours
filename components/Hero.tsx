@@ -2,94 +2,91 @@ export default function Hero() {
   return (
     <section
       style={{
-        minHeight: "80vh",
+        height: "100vh",
+        backgroundImage: "url('/hero-riviera-maya.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
         display: "flex",
-        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         textAlign: "center",
         color: "white",
-        backgroundImage:
-  "linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.45)), url('/hero-riviera-maya.jpg')",
-backgroundSize: "cover",
-backgroundPosition: "center 05%",
-backgroundRepeat: "no-repeat",
-        padding: "0 20px",
+        position: "relative",
       }}
     >
-      <p
-        style={{
-          letterSpacing: "3px",
-          textTransform: "uppercase",
-          marginBottom: "20px",
-          opacity: 0.8,
-        }}
-      >
-        Riviera Maya • Mexico
-      </p>
-
-      <h1
-        style={{
-          fontSize: "4rem",
-          maxWidth: "900px",
-          marginBottom: "20px",
-          lineHeight: 1.1,
-          textShadow: "0 4px 12px rgba(0,0,0,0.8)",
-        }}
-      >
-        Discover the Riviera Maya
-        <br />
-        Beyond the Ordinary
-      </h1>
-        
-      <p
-        style={{
-          maxWidth: "700px",
-          fontSize: "1.2rem",
-          marginBottom: "40px",
-          opacity: 0.9,
-          textShadow: "0 2px 8px rgba(0,0,0,0.8)",
-        }}
-      >
-        Personalized tours, exclusive experiences and unforgettable adventures
-        designed by local experts.
-      </p>
-
       <div
         style={{
-          display: "flex",
-          gap: "20px",
-          flexWrap: "wrap",
-          justifyContent: "center",
+          backgroundColor: "rgba(0,0,0,0.35)",
+          backdropFilter: "blur(2px)",
+          padding: "50px",
+          borderRadius: "20px",
+          maxWidth: "800px",
         }}
       >
-        <button
+        <h1
           style={{
-            padding: "15px 30px",
-            border: "none",
-            borderRadius: "10px",
-            cursor: "pointer",
-            fontWeight: "bold",
-            fontSize: "1rem",
+            fontSize: "3.2rem",
+            marginBottom: "20px",
           }}
         >
-          Explore Tours
-        </button>
+          Experience Riviera Maya Like a Local
+        </h1>
 
-        <button
+        <p
           style={{
-            padding: "15px 30px",
-            border: "2px solid white",
-            background: "transparent",
-            color: "white",
-            borderRadius: "10px",
-            cursor: "pointer",
-            fontWeight: "bold",
-            fontSize: "1rem",
+            fontSize: "1.3rem",
+            marginBottom: "35px",
           }}
         >
-          Contact Us
-        </button>
+          Handpicked tours, hidden gems and unforgettable adventures.
+        </p>
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "20px",
+            flexWrap: "wrap",
+          }}
+        >
+          <a
+            href="#experiences"
+            style={{
+              backgroundColor: "#06b6d4",
+              color: "white",
+              padding: "15px 30px",
+              borderRadius: "10px",
+              textDecoration: "none",
+              fontWeight: "bold",
+            }}
+          >
+            Explore Tours
+          </a>
+
+          <a
+            href="#contact"
+            style={{
+              backgroundColor: "#22c55e",
+              color: "white",
+              padding: "15px 30px",
+              borderRadius: "10px",
+              textDecoration: "none",
+              fontWeight: "bold",
+            }}
+          >
+            Contact Us
+          </a>
+        </div>
+
+        <div
+          style={{
+            marginTop: "40px",
+            fontSize: "2rem",
+            opacity: 0.9,
+          }}
+        >
+          ↓
+        </div>
       </div>
     </section>
   );
