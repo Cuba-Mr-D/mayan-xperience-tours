@@ -1,39 +1,117 @@
-export default function Navbar() {
-  return (
-    <nav
-      style={{
-        position: "fixed",
-        top: 0,
-        width: "100%",
-        padding: "30px 25px",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        backgroundColor: "#021024",
-        color: "white",
-        zIndex: 1000,
-      }}
-    >
-      <div
-        style={{
-          fontWeight: "bold",
-          fontSize: "1.2rem",
-          lineHeight: "1.3",
-        }}
-      >
-        MAYAN XPERIENCE
-      </div>
+"use client";
 
-      <div
+import { useState } from "react";
+
+export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <>
+      <nav
         style={{
+          position: "fixed",
+          top: 0,
+          width: "100%",
+          padding: "20px",
           display: "flex",
-          gap: "30px",
+          justifyContent: "space-between",
+          alignItems: "center",
+          backgroundColor: "#021024",
+          color: "white",
+          zIndex: 1000,
+          boxSizing: "border-box",
         }}
       >
-        <a href="#experiences">Experiences</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
+        <div
+          style={{
+            fontWeight: "bold",
+            fontSize: "1.2rem",
+          }}
+        >
+          MAYAN XPERIENCE
+        </div>
+
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          style={{
+            background: "none",
+            border: "none",
+            color: "white",
+            fontSize: "2rem",
+            cursor: "pointer",
+          }}
+        >
+          ☰
+        </button>
+      </nav>
+
+      {menuOpen && (
+        <div
+          style={{
+            position: "fixed",
+            top: "80px",
+            right: "20px",
+            backgroundColor: "#021024",
+            color: "white",
+            padding: "25px",
+            borderRadius: "15px",
+            display: "flex",
+            flexDirection: "column",
+            gap: "15px",
+            zIndex: 999,
+            minWidth: "180px",
+            boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+          }}
+        >
+          <a
+            href="#experiences"
+            style={{
+              color: "white",
+              textDecoration: "none",
+            }}
+            onClick={() => setMenuOpen(false)}
+          >
+            Experiences
+          </a>
+
+          <a
+            href="#about"
+            style={{
+              color: "white",
+              textDecoration: "none",
+            }}
+            onClick={() => setMenuOpen(false)}
+          >
+            About
+          </a>
+
+          <a
+            href="#contact"
+            style={{
+              color: "white",
+              textDecoration: "none",
+            }}
+            onClick={() => setMenuOpen(false)}
+          >
+            Contact
+          </a>
+
+          <hr
+            style={{
+              width: "100%",
+              borderColor: "#ffffff33",
+            }}
+          />
+
+          <div
+            style={{
+              color: "white",
+            }}
+          >
+            🌎 EN | ES | FR
+          </div>
+        </div>
+      )}
+    </>
   );
 }
