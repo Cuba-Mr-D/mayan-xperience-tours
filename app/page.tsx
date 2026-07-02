@@ -1,8 +1,8 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import FeaturedExperiences from "../components/FeaturedExperiences";
-import WhyUs from "../components/WhyUs";
 import PopularTours from "../components/PopularTours";
+import WhyUs from "../components/WhyUs";
+import FeaturedExperiences from "../components/FeaturedExperiences";
 import Testimonials from "../components/Testimonials";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
@@ -12,11 +12,22 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      <FeaturedExperiences />
-      <WhyUs />
+
+      {/* Most Popular Tours */}
       <PopularTours />
+
+      {/* Why Travel With Us */}
+      <WhyUs />
+
+      {/* Travel Styles / Featured Experiences */}
+      <FeaturedExperiences />
+
+      {/* Testimonials */}
       <Testimonials />
+
+      {/* Contact */}
       <Contact />
+
       <Footer />
     </main>
   );
