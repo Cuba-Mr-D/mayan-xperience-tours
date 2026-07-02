@@ -136,7 +136,7 @@ export default function PopularTours() {
           }}
         >
           <img
-            src="/tours/cenotess.jpg"
+            src="/tours/cenotes.jpg"
             alt="Cenotes"
             style={{
               width: "100%",
