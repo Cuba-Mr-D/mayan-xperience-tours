@@ -25,7 +25,8 @@ export default function Navbar() {
         <div
           style={{
             fontWeight: "bold",
-            fontSize: "1.2rem",
+            fontSize: "1.4rem",
+            letterSpacing: "1px",
           }}
         >
           MAYAN XPERIENCE
@@ -49,26 +50,28 @@ export default function Navbar() {
         <div
           style={{
             position: "fixed",
-            top: "80px",
-            right: "20px",
+            top: "70px",
+            right: "15px",
             backgroundColor: "#021024",
             color: "white",
-            padding: "25px",
-            borderRadius: "15px",
+            padding: "30px",
+            borderRadius: "20px",
             display: "flex",
             flexDirection: "column",
             gap: "15px",
             zIndex: 999,
-            minWidth: "180px",
+            minWidth: "220px",
             boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
           }}
         >
           <a
             href="#experiences"
             style={{
-              color: "white",
-              textDecoration: "none",
-            }}
+            color: "white",
+            textDecoration: "none",
+            fontSize: "1.1rem",
+            fontWeight: "500",
+}}
             onClick={() => setMenuOpen(false)}
           >
             Experiences
