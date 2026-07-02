@@ -32,7 +32,6 @@ export default function Navbar() {
         <a href="#experiences">Experiences</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
-        <span>ES | EN | FR</span>
       </div>
     </nav>
   );
