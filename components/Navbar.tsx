@@ -5,7 +5,7 @@ export default function Navbar() {
         position: "fixed",
         top: 0,
         width: "100%",
-        padding: "20px 40px",
+        padding: "30px 25px",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
@@ -18,6 +18,7 @@ export default function Navbar() {
         style={{
           fontWeight: "bold",
           fontSize: "1.2rem",
+          lineHeight: "1.3",
         }}
       >
         MAYAN XPERIENCE
@@ -26,12 +27,12 @@ export default function Navbar() {
       <div
         style={{
           display: "flex",
-          gap: "20px",
+          gap: "30px",
         }}
       >
         <a href="#experiences">Experiences</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </div>
     </nav>
   );
