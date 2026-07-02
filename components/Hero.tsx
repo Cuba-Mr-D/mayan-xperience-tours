@@ -20,7 +20,8 @@ export default function Hero() {
           backdropFilter: "blur(2px)",
           padding: "50px",
           borderRadius: "20px",
-          maxWidth: "800px",
+          maxWidth: "90%",
+          width: "100%",
         }}
       >
         <h1
