@@ -38,17 +38,27 @@ export default function IslaMujeresPage() {
             padding: "20px",
           }}
         >
+          <h1
+            style={{
+              fontSize: "3.5rem",
+              fontWeight: "bold",
+              marginBottom: "15px",
+            }}
+          >
+            Isla Mujeres
+          </h1>
+
           <p
-  style={{
-    maxWidth: "800px",
-    fontSize: "1.2rem",
-    lineHeight: "1.8",
-  }}
->
-  Discover Playa Norte, internationally recognized as one of the world's
-  most beautiful beaches. Enjoy turquoise waters, soft white sand and the
-  unique charm of Isla Mujeres in an experience tailored to your travel style.
-</p>
+            style={{
+              maxWidth: "800px",
+              fontSize: "1.2rem",
+              lineHeight: "1.8",
+            }}
+          >
+            Discover Playa Norte, internationally recognized as one of the world's
+            most beautiful beaches. Enjoy turquoise waters, soft white sand and the
+            unique charm of Isla Mujeres in an experience tailored to your travel style.
+          </p>
         </div>
       </section>
 
@@ -104,9 +114,14 @@ export default function IslaMujeresPage() {
             color: "#4b5563",
           }}
         >
-          Sail through crystal-clear turquoise waters, discover the charm of
-          Isla Mujeres, relax at beautiful beaches and enjoy a personalized
-          experience designed around your travel style.
+          Escape to the Caribbean paradise of Isla Mujeres, a destination famous
+          for its crystal-clear waters, relaxed atmosphere and breathtaking
+          scenery. Depending on the experience you choose, you may enjoy sailing
+          across the Caribbean Sea, snorkeling in vibrant reefs, relaxing at
+          exclusive beach clubs or exploring the island at your own pace.
+
+          Every visit offers a unique combination of natural beauty, local
+          culture and unforgettable moments designed to create lasting memories.
         </p>
 
         <h2 style={{ marginTop: "50px" }}>
@@ -114,11 +129,11 @@ export default function IslaMujeresPage() {
         </h2>
 
         <ul style={{ lineHeight: "2" }}>
-          <li>Standard Experience</li>
-          <li>Premium Experience</li>
-          <li>Small Group Experience</li>
-          <li>Private Charter Experience</li>
-          <li>Luxury Experience</li>
+          <li>Luxury Catamaran Experience</li>
+          <li>Small Group Sailing Adventure</li>
+          <li>Family-Friendly Island Escape</li>
+          <li>Beach Club & Relaxation Day</li>
+          <li>Private Customized Experience</li>
         </ul>
 
         <h2 style={{ marginTop: "50px" }}>
