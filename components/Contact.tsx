@@ -34,7 +34,7 @@ export default function Contact() {
         }}
       >
         <p>📱 WhatsApp: +52 9842467762</p>
-        <p>📧 Email: info@mayanxperience.com</p>
+        <p>📧 Email: cuba.mr.d@gmail.com</p>
         <p>📍 Riviera Maya, Mexico</p>
       </div>
 
