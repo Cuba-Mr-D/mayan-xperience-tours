@@ -26,7 +26,7 @@ export default function Hero() {
       >
         <h1
           style={{
-            fontSize: "3.2rem",
+            fontSize: "2.2rem",
             marginBottom: "20px",
           }}
         >
@@ -35,7 +35,7 @@ export default function Hero() {
 
         <p
           style={{
-            fontSize: "1.3rem",
+            fontSize: "1.1rem",
             marginBottom: "35px",
           }}
         >
