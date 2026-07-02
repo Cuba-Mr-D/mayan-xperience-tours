@@ -38,24 +38,17 @@ export default function IslaMujeresPage() {
             padding: "20px",
           }}
         >
-          <h1
-            style={{
-              fontSize: "3rem",
-              marginBottom: "10px",
-            }}
-          >
-            Isla Mujeres Experience
-          </h1>
-
           <p
-            style={{
-              maxWidth: "700px",
-              fontSize: "1.2rem",
-            }}
-          >
-            Discover one of the most beautiful islands in the Mexican Caribbean
-            with a personalized experience tailored to your travel style.
-          </p>
+  style={{
+    maxWidth: "800px",
+    fontSize: "1.2rem",
+    lineHeight: "1.8",
+  }}
+>
+  Discover Playa Norte, internationally recognized as one of the world's
+  most beautiful beaches. Enjoy turquoise waters, soft white sand and the
+  unique charm of Isla Mujeres in an experience tailored to your travel style.
+</p>
         </div>
       </section>
 
