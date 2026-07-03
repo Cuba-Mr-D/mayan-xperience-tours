@@ -80,76 +80,133 @@ export default function PopularTours() {
         </Link>
 
         {/* Chichen Itza */}
-        <div
+        <Link
+          href="/chichen-itza"
           style={{
-            border: "1px solid #ddd",
-            borderRadius: "12px",
-            overflow: "hidden",
+            textDecoration: "none",
+            color: "inherit",
           }}
         >
-          <img
-            src="/tours/chichen.jpg"
-            alt="Chichén Itzá"
+          <div
             style={{
-              width: "100%",
-              height: "250px",
-              objectFit: "cover",
+              border: "1px solid #ddd",
+              borderRadius: "12px",
+              overflow: "hidden",
+              cursor: "pointer",
             }}
-          />
+          >
+            <img
+              src="/tours/chichen.jpg"
+              alt="Chichén Itzá"
+              style={{
+                width: "100%",
+                height: "250px",
+                objectFit: "cover",
+              }}
+            />
 
-          <div style={{ padding: "20px" }}>
-            <h3>🏛️ Chichén Itzá</h3>
-            <p>Maravilla del mundo y legado de la cultura maya.</p>
+            <div style={{ padding: "20px" }}>
+              <h3>🏛️ Chichén Itzá</h3>
+              <p>Maravilla del mundo y legado de la cultura maya.</p>
+
+              <p
+                style={{
+                  marginTop: "15px",
+                  color: "#0284c7",
+                  fontWeight: "bold",
+                }}
+              >
+                View Experience →
+              </p>
+            </div>
           </div>
-        </div>
+        </Link>
 
         {/* Tulum */}
-        <div
+        <Link
+          href="/tulum"
           style={{
-            border: "1px solid #ddd",
-            borderRadius: "12px",
-            overflow: "hidden",
+            textDecoration: "none",
+            color: "inherit",
           }}
         >
-          <img
-            src="/tours/tulum.jpg"
-            alt="Tulum"
+          <div
             style={{
-              width: "100%",
-              height: "250px",
-              objectFit: "cover",
+              border: "1px solid #ddd",
+              borderRadius: "12px",
+              overflow: "hidden",
+              cursor: "pointer",
             }}
-          />
+          >
+            <img
+              src="/tours/tulum.jpg"
+              alt="Tulum"
+              style={{
+                width: "100%",
+                height: "250px",
+                objectFit: "cover",
+              }}
+            />
 
-          <div style={{ padding: "20px" }}>
-            <h3>🌴 Tulum</h3>
-            <p>Ruinas frente al Caribe y vistas espectaculares.</p>
+            <div style={{ padding: "20px" }}>
+              <h3>🌴 Tulum</h3>
+              <p>Ruinas frente al Caribe y vistas espectaculares.</p>
+
+              <p
+                style={{
+                  marginTop: "15px",
+                  color: "#0284c7",
+                  fontWeight: "bold",
+                }}
+              >
+                View Experience →
+              </p>
+            </div>
           </div>
-        </div>
+        </Link>
 
         {/* Cenotes */}
-        <div
+        <Link
+          href="/cenotes"
           style={{
-            border: "1px solid #ddd",
-            borderRadius: "12px",
-            overflow: "hidden",
+            textDecoration: "none",
+            color: "inherit",
           }}
         >
-          <img
-            src="/tours/cenotes.jpg"
-            alt="Cenotes"
+          <div
             style={{
-              width: "100%",
-              height: "250px",
-              objectFit: "cover",
+              border: "1px solid #ddd",
+              borderRadius: "12px",
+              overflow: "hidden",
+              cursor: "pointer",
             }}
-          />
+          >
+            <img
+              src="/tours/cenotes.jpg"
+              alt="Cenotes"
+              style={{
+                width: "100%",
+                height: "250px",
+                objectFit: "cover",
+              }}
+            />
 
-          <div style={{ padding: "20px" }}>
-            <h3>💦 Cenotes</h3>
-            <p>Nada en aguas cristalinas rodeadas de naturaleza.</p>
+            <div style={{ padding: "20px" }}>
+              <h3>💦 Cenotes</h3>
+              <p>Nada en aguas cristalinas rodeadas de naturaleza.</p>
+
+              <p
+                style={{
+                  marginTop: "15px",
+                  color: "#0284c7",
+                  fontWeight: "bold",
+                }}
+              >
+                View Experience →
+              </p>
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
     </section>
   );
