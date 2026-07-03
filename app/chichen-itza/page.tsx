@@ -87,14 +87,13 @@ export default function ChichenItzaPage() {
             gap: "20px",
           }}
         >
-          <img src="/tours/isla-mujeres-gallery/1.jpg" alt="Gallery 1" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/2.jpg" alt="Gallery 2" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/3.jpg" alt="Gallery 3" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/4.jpg" alt="Gallery 4" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/5.jpg" alt="Gallery 5" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/6.jpg" alt="Gallery 6" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/7.jpg" alt="Gallery 7" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/8.jpg" alt="Gallery 8" style={{ width: "100%", borderRadius: "15px" }} />
+          <img src="/tours/chichen-gallery/chichen1.jpg" alt="Chichen 1" style={{ width: "100%", borderRadius: "15px" }} />
+          <img src="/tours/chichen-gallery/chichen2.jpg" alt="Chichen 2" style={{ width: "100%", borderRadius: "15px" }} />
+          <img src="/tours/chichen-gallery/chichen3.jpg" alt="Chichen 3" style={{ width: "100%", borderRadius: "15px" }} />
+          <img src="/tours/chichen-gallery/chichen4.jpg" alt="Chichen 4" style={{ width: "100%", borderRadius: "15px" }} />
+          <img src="/tours/chichen-gallery/chichen5.jpg" alt="Chichen 5" style={{ width: "100%", borderRadius: "15px" }} />
+          <img src="/tours/chichen-gallery/chichen6.jpg" alt="Chichen 6" style={{ width: "100%", borderRadius: "15px" }} />
+          <img src="/tours/chichen-gallery/chichen7.jpg" alt="Chichen 7" style={{ width: "100%", borderRadius: "15px" }} />
         </div>
       </section>
 
