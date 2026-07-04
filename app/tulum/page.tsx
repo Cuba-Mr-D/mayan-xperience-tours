@@ -16,7 +16,7 @@ export default function TulumPage() {
         }}
       >
         <Image
-          src="/tours/chichen.jpg"
+          src="/tours/tulum1.jpg"
           alt="Tulum"
           fill
           style={{
@@ -88,14 +88,12 @@ export default function TulumPage() {
             gap: "20px",
           }}
         >
-          <img src="/tours/isla-mujeres-gallery/1.jpg" alt="Gallery 1" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/2.jpg" alt="Gallery 2" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/3.jpg" alt="Gallery 3" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/4.jpg" alt="Gallery 4" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/5.jpg" alt="Gallery 5" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/6.jpg" alt="Gallery 6" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/7.jpg" alt="Gallery 7" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/8.jpg" alt="Gallery 8" style={{ width: "100%", borderRadius: "15px" }} />
+          <img src="/tours/tulum-gallery/tulum1.jpg" alt="Tulum 1" style={{ width: "100%", borderRadius: "15px" }} />
+          <img src="/tours/tulum-gallery/tulum2.jpg" alt="Tulum 2" style={{ width: "100%", borderRadius: "15px" }} />
+          <img src="/tours/tulum-gallery/tulum3.jpg" alt="Tulum 3" style={{ width: "100%", borderRadius: "15px" }} />
+          <img src="/tours/tulum-gallery/tulum4.jpg" alt="Tulum 4" style={{ width: "100%", borderRadius: "15px" }} />
+          <img src="/tours/tulum-gallery/tulum5.jpg" alt="Tulum 5" style={{ width: "100%", borderRadius: "15px" }} />
+          <img src="/tours/tulum-gallery/tulum6.jpg" alt="Tulum 6" style={{ width: "100%", borderRadius: "15px" }} />
         </div>
       </section>
 

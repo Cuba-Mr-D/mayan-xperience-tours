@@ -16,7 +16,7 @@ export default function CenotesPage() {
         }}
       >
         <Image
-          src="/tours/chichen.jpg"
+          src="/tours/cenote1.jpg"
           alt="Cenotes Adventure"
           fill
           style={{
@@ -87,14 +87,16 @@ export default function CenotesPage() {
             gap: "20px",
           }}
         >
-          <img src="/tours/isla-mujeres-gallery/1.jpg" alt="Gallery 1" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/2.jpg" alt="Gallery 2" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/3.jpg" alt="Gallery 3" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/4.jpg" alt="Gallery 4" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/5.jpg" alt="Gallery 5" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/6.jpg" alt="Gallery 6" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/7.jpg" alt="Gallery 7" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/8.jpg" alt="Gallery 8" style={{ width: "100%", borderRadius: "15px" }} />
+          <img src="/tours/cenotes-gallery/cenote1.jpg" alt="Cenote 1" style={{ width: "100%", borderRadius: "15px" }} />
+          <img src="/tours/cenotes-gallery/cenote2.jpg" alt="Cenote 2" style={{ width: "100%", borderRadius: "15px" }} />
+          <img src="/tours/cenotes-gallery/cenote3.jpg" alt="Cenote 3" style={{ width: "100%", borderRadius: "15px" }} />
+          <img src="/tours/cenotes-gallery/cenote4.jpg" alt="Cenote 4" style={{ width: "100%", borderRadius: "15px" }} />
+          <img src="/tours/cenotes-gallery/cenote5.jpg" alt="Cenote 5" style={{ width: "100%", borderRadius: "15px" }} />
+          <img src="/tours/cenotes-gallery/cenote6.jpg" alt="Cenote 6" style={{ width: "100%", borderRadius: "15px" }} />
+          <img src="/tours/cenotes-gallery/cenote7.jpg" alt="Cenote 7" style={{ width: "100%", borderRadius: "15px" }} />
+          <img src="/tours/cenotes-gallery/cenote8.jpg" alt="Cenote 8" style={{ width: "100%", borderRadius: "15px" }} />
+          <img src="/tours/cenotes-gallery/cenote9.jpg" alt="Cenote 9" style={{ width: "100%", borderRadius: "15px" }} />
+          <img src="/tours/cenotes-gallery/cenote10.jpg" alt="Cenote 10" style={{ width: "100%", borderRadius: "15px" }} />
         </div>
       </section>
 
