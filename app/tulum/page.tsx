@@ -16,7 +16,7 @@ export default function TulumPage() {
         }}
       >
         <Image
-          src="/tours/tulum1.jpg"
+          src="/tours/tulum-gallery/tulum1.jpg"
           alt="Tulum"
           fill
           style={{
