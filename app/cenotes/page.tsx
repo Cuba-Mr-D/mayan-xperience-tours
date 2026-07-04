@@ -16,7 +16,7 @@ export default function CenotesPage() {
         }}
       >
         <Image
-          src="/tours/cenotes-gallery/cenote2.jpg"
+          src="/tours/cenotes-gallery/cenote1.jpg"
           alt="Cenotes Adventure"
           fill
           style={{
