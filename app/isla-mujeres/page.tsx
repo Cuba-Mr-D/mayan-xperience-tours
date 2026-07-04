@@ -1,6 +1,18 @@
 import Image from "next/image";
+import Gallery from "@/components/Gallery";
 
 export default function IslaMujeresPage() {
+  const galleryImages = [
+    "/tours/isla-mujeres-gallery/1.jpg",
+    "/tours/isla-mujeres-gallery/2.jpg",
+    "/tours/isla-mujeres-gallery/3.jpg",
+    "/tours/isla-mujeres-gallery/4.jpg",
+    "/tours/isla-mujeres-gallery/5.jpg",
+    "/tours/isla-mujeres-gallery/6.jpg",
+    "/tours/isla-mujeres-gallery/7.jpg",
+    "/tours/isla-mujeres-gallery/8.jpg",
+  ];
+
   return (
     <main
       style={{
@@ -80,22 +92,7 @@ export default function IslaMujeresPage() {
           Experience Gallery
         </h2>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-            gap: "20px",
-          }}
-        >
-          <img src="/tours/isla-mujeres-gallery/1.jpg" alt="Gallery 1" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/2.jpg" alt="Gallery 2" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/3.jpg" alt="Gallery 3" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/4.jpg" alt="Gallery 4" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/5.jpg" alt="Gallery 5" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/6.jpg" alt="Gallery 6" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/7.jpg" alt="Gallery 7" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/isla-mujeres-gallery/8.jpg" alt="Gallery 8" style={{ width: "100%", borderRadius: "15px" }} />
-        </div>
+        <Gallery images={galleryImages} />
       </section>
 
       {/* Content */}

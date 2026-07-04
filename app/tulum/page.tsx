@@ -1,6 +1,15 @@
 import Image from "next/image";
+import Gallery from "@/components/Gallery";
 
 export default function TulumPage() {
+  const galleryImages = [
+    "/tours/tulum-gallery/tulum1.jpg",
+    "/tours/tulum-gallery/tulum2.jpg",
+    "/tours/tulum-gallery/tulum3.jpg",
+    "/tours/tulum-gallery/tulum4.jpg",
+    "/tours/tulum-gallery/tulum5.jpg",
+    "/tours/tulum-gallery/tulum6.jpg",
+  ];
   return (
     <main
       style={{
@@ -81,20 +90,7 @@ export default function TulumPage() {
           Experience Gallery
         </h2>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-            gap: "20px",
-          }}
-        >
-          <img src="/tours/tulum-gallery/tulum1.jpg" alt="Tulum 1" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/tulum-gallery/tulum2.jpg" alt="Tulum 2" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/tulum-gallery/tulum3.jpg" alt="Tulum 3" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/tulum-gallery/tulum4.jpg" alt="Tulum 4" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/tulum-gallery/tulum5.jpg" alt="Tulum 5" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/tulum-gallery/tulum6.jpg" alt="Tulum 6" style={{ width: "100%", borderRadius: "15px" }} />
-        </div>
+        <Gallery images={galleryImages} />
       </section>
 
       {/* Content */}

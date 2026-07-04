@@ -1,6 +1,17 @@
 import Image from "next/image";
+import Gallery from "@/components/Gallery";
 
 export default function ChichenItzaPage() {
+  const galleryImages = [
+    "/tours/chichen-gallery/chichen1.jpg",
+    "/tours/chichen-gallery/chichen2.jpg",
+    "/tours/chichen-gallery/chichen3.jpg",
+    "/tours/chichen-gallery/chichen4.jpg",
+    "/tours/chichen-gallery/chichen5.jpg",
+    "/tours/chichen-gallery/chichen6.jpg",
+    "/tours/chichen-gallery/chichen7.jpg",
+  ];
+
   return (
     <main
       style={{
@@ -80,21 +91,7 @@ export default function ChichenItzaPage() {
           Experience Gallery
         </h2>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-            gap: "20px",
-          }}
-        >
-          <img src="/tours/chichen-gallery/chichen1.jpg" alt="Chichen 1" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/chichen-gallery/chichen2.jpg" alt="Chichen 2" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/chichen-gallery/chichen3.jpg" alt="Chichen 3" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/chichen-gallery/chichen4.jpg" alt="Chichen 4" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/chichen-gallery/chichen5.jpg" alt="Chichen 5" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/chichen-gallery/chichen6.jpg" alt="Chichen 6" style={{ width: "100%", borderRadius: "15px" }} />
-          <img src="/tours/chichen-gallery/chichen7.jpg" alt="Chichen 7" style={{ width: "100%", borderRadius: "15px" }} />
-        </div>
+        <Gallery images={galleryImages} />
       </section>
 
       {/* Content */}
