@@ -51,7 +51,7 @@ export default function Hero() {
           }}
         >
           <a
-            href="#experiences"
+            href="#popular-tours"
             style={{
               backgroundColor: "#06b6d4",
               color: "white",

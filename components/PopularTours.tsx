@@ -3,7 +3,9 @@ import Link from "next/link";
 export default function PopularTours() {
   return (
     <section
+      id="popular-tours"
       style={{
+        scrollMarginTop: "80px",
         padding: "100px 40px",
         textAlign: "center",
         backgroundColor: "#ffffff",
@@ -64,7 +66,7 @@ export default function PopularTours() {
 
             <div style={{ padding: "20px" }}>
               <h3>🏝️ Isla Mujeres</h3>
-              <p>Catamarán, snorkel y aguas turquesa.</p>
+              <p>Catamaran sailing, snorkeling and turquoise waters.</p>
 
               <p
                 style={{
@@ -107,7 +109,7 @@ export default function PopularTours() {
 
             <div style={{ padding: "20px" }}>
               <h3>🏛️ Chichén Itzá</h3>
-              <p>Maravilla del mundo y legado de la cultura maya.</p>
+              <p>One of the New Seven Wonders and a symbol of Mayan heritage.</p>
 
               <p
                 style={{
@@ -150,7 +152,7 @@ export default function PopularTours() {
 
             <div style={{ padding: "20px" }}>
               <h3>🌴 Tulum</h3>
-              <p>Ruinas frente al Caribe y vistas espectaculares.</p>
+              <p>Clifftop ruins overlooking the Caribbean Sea.</p>
 
               <p
                 style={{
@@ -192,8 +194,9 @@ export default function PopularTours() {
             />
 
             <div style={{ padding: "20px" }}>
-              <h3>💦 Cenotes</h3>
-              <p>Nada en aguas cristalinas rodeadas de naturaleza.</p>
+
+              <h3>💦 Cenotes Experience</h3>
+              <p>Swim in crystal-clear waters surrounded by nature.</p>
 
               <p
                 style={{
