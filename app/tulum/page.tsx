@@ -54,7 +54,7 @@ export default function TulumPage() {
               marginBottom: "15px",
             }}
           >
-            Tulum
+            Tulum: Where History Meets the Caribbean
           </h1>
 
           <p
@@ -64,10 +64,9 @@ export default function TulumPage() {
               lineHeight: "1.8",
             }}
           >
-            Discover the breathtaking beauty of Tulum, the only ancient Mayan
-            city built on the Caribbean coastline. Enjoy spectacular ocean
-            views, fascinating history and one of the most iconic destinations
-            in Mexico.
+            Explore ancient Mayan ruins perched above turquoise Caribbean waters
+            and discover one of Mexico's most iconic destinations. A perfect
+            blend of history, culture and breathtaking coastal scenery.
           </p>
         </div>
       </section>
@@ -162,6 +161,22 @@ export default function TulumPage() {
             marginBottom: "60px",
           }}
         >
+          <h2
+            style={{
+              marginBottom: "15px",
+            }}
+          >
+            Ready to Explore Tulum?
+          </h2>
+
+          <p
+            style={{
+              color: "#4b5563",
+              marginBottom: "30px",
+            }}
+          >
+            Contact us today for pricing, availability and personalized recommendations.
+          </p>
           <a
             href="https://wa.me/529842467762?text=Hello%20Mayan%20Xperience%20Tours!%20I%20am%20interested%20in%20the%20Tulum%20Experience."
             target="_blank"
