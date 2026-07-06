@@ -54,7 +54,7 @@ export default function TulumPage() {
               marginBottom: "15px",
             }}
           >
-            Tulum: Where History Meets the Caribbean
+            Tulum
           </h1>
 
           <p
