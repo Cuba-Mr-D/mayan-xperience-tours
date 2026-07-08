@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function FeaturedExperiences() {
   return (
     <section
@@ -52,25 +50,24 @@ export default function FeaturedExperiences() {
               boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
             }}
           >
-            <h3>💑 Traveling as a Couple?</h3>
+            <h3
+              style={{
+                fontSize: "1.5rem",
+                fontWeight: "bold",
+                marginBottom: "15px",
+                color: "#111827",
+              }}
+            >
+              💑 Traveling as a Couple?
+            </h3>
 
             <p
               style={{
                 color: "#6b7280",
-                lineHeight: "1.6",
+                lineHeight: "1.8",
               }}
             >
               Perfect for romantic getaways, breathtaking views and unforgettable moments together.
-            </p>
-
-            <p
-              style={{
-                marginTop: "20px",
-                fontWeight: "bold",
-                color: "#111827",
-              }}
-            >
-              Recommended:
             </p>
 
             <ul
@@ -78,6 +75,7 @@ export default function FeaturedExperiences() {
                 color: "#6b7280",
                 lineHeight: "2",
                 paddingLeft: "20px",
+                marginTop: "20px",
               }}
             >
               <li>Isla Mujeres Experience</li>
@@ -95,25 +93,24 @@ export default function FeaturedExperiences() {
               boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
             }}
           >
-            <h3>👨‍👩‍👧‍👦 Family Vacation</h3>
+            <h3
+              style={{
+                fontSize: "1.5rem",
+                fontWeight: "bold",
+                marginBottom: "15px",
+                color: "#111827",
+              }}
+            >
+              👨‍👩‍👧‍👦 Family Vacation
+            </h3>
 
             <p
               style={{
                 color: "#6b7280",
-                lineHeight: "1.6",
+                lineHeight: "1.8",
               }}
             >
               Fun, culture and adventure for travelers of all ages.
-            </p>
-
-            <p
-              style={{
-                marginTop: "20px",
-                fontWeight: "bold",
-                color: "#111827",
-              }}
-            >
-              Recommended:
             </p>
 
             <ul
@@ -121,6 +118,7 @@ export default function FeaturedExperiences() {
                 color: "#6b7280",
                 lineHeight: "2",
                 paddingLeft: "20px",
+                marginTop: "20px",
               }}
             >
               <li>Chichen Itza</li>
@@ -138,25 +136,24 @@ export default function FeaturedExperiences() {
               boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
             }}
           >
-            <h3>🎉 Traveling with Friends</h3>
+            <h3
+              style={{
+                fontSize: "1.5rem",
+                fontWeight: "bold",
+                marginBottom: "15px",
+                color: "#111827",
+              }}
+            >
+              🎉 Traveling with Friends
+            </h3>
 
             <p
               style={{
                 color: "#6b7280",
-                lineHeight: "1.6",
+                lineHeight: "1.8",
               }}
             >
               Great for groups looking for fun, adventure and memorable experiences in the Riviera Maya.
-            </p>
-
-            <p
-              style={{
-                marginTop: "20px",
-                fontWeight: "bold",
-                color: "#111827",
-              }}
-            >
-              Recommended:
             </p>
 
             <ul
@@ -164,6 +161,7 @@ export default function FeaturedExperiences() {
                 color: "#6b7280",
                 lineHeight: "2",
                 paddingLeft: "20px",
+                marginTop: "20px",
               }}
             >
               <li>Isla Mujeres Experience</li>
