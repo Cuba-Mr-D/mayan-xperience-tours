@@ -1,6 +1,22 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function PopularTours() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkScreen();
+
+    window.addEventListener("resize", checkScreen);
+
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
   return (
     <section
       id="popular-tours"
@@ -32,9 +48,11 @@ export default function PopularTours() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "1fr",
+          gridTemplateColumns: isMobile
+            ? "1fr"
+            : "repeat(2, 1fr)",
           gap: "30px",
-          maxWidth: "600px",
+          maxWidth: isMobile ? "600px" : "1000px",
           margin: "0 auto",
         }}
       >
