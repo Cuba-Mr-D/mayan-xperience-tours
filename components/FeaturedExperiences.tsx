@@ -23,7 +23,7 @@ export default function FeaturedExperiences() {
             color: "#111827",
           }}
         >
-          Featured Experiences
+          Travel Recommendations
         </h2>
 
         <p
@@ -33,7 +33,7 @@ export default function FeaturedExperiences() {
             marginBottom: "60px",
           }}
         >
-          Handpicked adventures across the Riviera Maya
+          Not sure where to start? Here are our favorite experiences based on your travel style.
         </p>
 
         <div
@@ -43,48 +43,7 @@ export default function FeaturedExperiences() {
             gap: "30px",
           }}
         >
-          {/* Isla Mujeres */}
-          <Link
-            href="/isla-mujeres"
-            style={{ textDecoration: "none" }}
-          >
-            <div
-              style={{
-                backgroundColor: "#f8fafc",
-                padding: "40px",
-                borderRadius: "24px",
-                boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
-                cursor: "pointer",
-                height: "100%",
-              }}
-            >
-              <h3 style={{ color: "#111827" }}>
-                🏝 Isla Mujeres Experience
-              </h3>
-
-              <p
-                style={{
-                  color: "#6b7280",
-                  lineHeight: "1.6",
-                }}
-              >
-                Discover the Caribbean with personalized sailing experiences,
-                beach clubs and unforgettable island adventures.
-              </p>
-
-              <p
-                style={{
-                  marginTop: "20px",
-                  color: "#0284c7",
-                  fontWeight: "bold",
-                }}
-              >
-                View Experience →
-              </p>
-            </div>
-          </Link>
-
-          {/* Chichen Itza */}
+          {/* Couples */}
           <div
             style={{
               backgroundColor: "#f8fafc",
@@ -93,7 +52,7 @@ export default function FeaturedExperiences() {
               boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
             }}
           >
-            <h3>🏛 Chichen Itza Experience</h3>
+            <h3>💑 Traveling as a Couple?</h3>
 
             <p
               style={{
@@ -101,21 +60,33 @@ export default function FeaturedExperiences() {
                 lineHeight: "1.6",
               }}
             >
-              Explore one of the most important archaeological sites in the
-              world and immerse yourself in Maya history.
+              Perfect for romantic getaways, breathtaking views and unforgettable moments together.
             </p>
 
             <p
               style={{
                 marginTop: "20px",
-                color: "#94a3b8",
+                fontWeight: "bold",
+                color: "#111827",
               }}
             >
-              Coming Soon
+              Recommended:
             </p>
+
+            <ul
+              style={{
+                color: "#6b7280",
+                lineHeight: "2",
+                paddingLeft: "20px",
+              }}
+            >
+              <li>Isla Mujeres Experience</li>
+              <li>Tulum</li>
+              <li>Sunset Catamaran</li>
+            </ul>
           </div>
 
-          {/* Tulum */}
+          {/* Family */}
           <div
             style={{
               backgroundColor: "#f8fafc",
@@ -124,7 +95,7 @@ export default function FeaturedExperiences() {
               boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
             }}
           >
-            <h3>🌴 Tulum Experience</h3>
+            <h3>👨‍👩‍👧‍👦 Family Vacation</h3>
 
             <p
               style={{
@@ -132,18 +103,73 @@ export default function FeaturedExperiences() {
                 lineHeight: "1.6",
               }}
             >
-              Ancient ruins, turquoise waters and unique experiences tailored
-              to your travel style.
+              Fun, culture and adventure for travelers of all ages.
             </p>
 
             <p
               style={{
                 marginTop: "20px",
-                color: "#94a3b8",
+                fontWeight: "bold",
+                color: "#111827",
               }}
             >
-              Coming Soon
+              Recommended:
             </p>
+
+            <ul
+              style={{
+                color: "#6b7280",
+                lineHeight: "2",
+                paddingLeft: "20px",
+              }}
+            >
+              <li>Chichen Itza</li>
+              <li>Cenotes Experience</li>
+              <li>Xel-Há</li>
+            </ul>
+          </div>
+
+          {/* Friends */}
+          <div
+            style={{
+              backgroundColor: "#f8fafc",
+              padding: "40px",
+              borderRadius: "24px",
+              boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
+            }}
+          >
+            <h3>🎉 Traveling with Friends</h3>
+
+            <p
+              style={{
+                color: "#6b7280",
+                lineHeight: "1.6",
+              }}
+            >
+              Great for groups looking for fun, adventure and memorable experiences in the Riviera Maya.
+            </p>
+
+            <p
+              style={{
+                marginTop: "20px",
+                fontWeight: "bold",
+                color: "#111827",
+              }}
+            >
+              Recommended:
+            </p>
+
+            <ul
+              style={{
+                color: "#6b7280",
+                lineHeight: "2",
+                paddingLeft: "20px",
+              }}
+            >
+              <li>Isla Mujeres Experience</li>
+              <li>Cenotes Experience</li>
+              <li>ATV Adventure</li>
+            </ul>
           </div>
         </div>
       </div>
