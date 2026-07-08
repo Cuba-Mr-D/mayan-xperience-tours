@@ -67,11 +67,11 @@ export default function Navbar() {
           <a
             href="#experiences"
             style={{
-            color: "white",
-            textDecoration: "none",
-            fontSize: "1.1rem",
-            fontWeight: "500",
-}}
+              color: "white",
+              textDecoration: "none",
+              fontSize: "1.1rem",
+              fontWeight: "500",
+            }}
             onClick={() => setMenuOpen(false)}
           >
             Experiences
@@ -108,10 +108,46 @@ export default function Navbar() {
 
           <div
             style={{
-              color: "white",
+              display: "flex",
+              gap: "10px",
+              justifyContent: "center",
             }}
           >
-            🌎 EN | ES | FR
+            <button
+              style={{
+                background: "none",
+                border: "none",
+                color: "white",
+                cursor: "pointer",
+                fontSize: "1rem",
+              }}
+            >
+              🇺🇸 EN
+            </button>
+
+            <button
+              style={{
+                background: "none",
+                border: "none",
+                color: "white",
+                cursor: "pointer",
+                fontSize: "1rem",
+              }}
+            >
+              🇲🇽 ES
+            </button>
+
+            <button
+              style={{
+                background: "none",
+                border: "none",
+                color: "white",
+                cursor: "pointer",
+                fontSize: "1rem",
+              }}
+            >
+              🇫🇷 FR
+            </button>
           </div>
         </div>
       )}
