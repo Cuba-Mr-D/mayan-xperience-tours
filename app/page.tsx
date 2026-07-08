@@ -16,11 +16,12 @@ export default function Home() {
       {/* Most Popular Tours */}
       <PopularTours />
 
-      {/* Why Travel With Us */}
-      <WhyUs />
 
       {/* Travel Styles / Featured Experiences */}
       <FeaturedExperiences />
+
+      {/* Why Travel With Us */}
+      <WhyUs />
 
       {/* Testimonials */}
       <Testimonials />
