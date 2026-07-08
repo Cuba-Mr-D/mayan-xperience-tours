@@ -16,7 +16,7 @@ export default function FeaturedExperiences() {
         <h2
           style={{
             textAlign: "center",
-            fontSize: "3rem",
+            fontSize: "2.2rem",
             marginBottom: "20px",
             color: "#111827",
           }}
@@ -74,8 +74,10 @@ export default function FeaturedExperiences() {
               style={{
                 color: "#6b7280",
                 lineHeight: "2",
-                paddingLeft: "20px",
+                listStyle: "none",
+                padding: 0,
                 marginTop: "20px",
+                textAlign: "center",
               }}
             >
               <li>Isla Mujeres Experience</li>
@@ -117,8 +119,10 @@ export default function FeaturedExperiences() {
               style={{
                 color: "#6b7280",
                 lineHeight: "2",
-                paddingLeft: "20px",
+                listStyle: "none",
+                padding: 0,
                 marginTop: "20px",
+                textAlign: "center",
               }}
             >
               <li>Chichen Itza</li>
@@ -160,8 +164,10 @@ export default function FeaturedExperiences() {
               style={{
                 color: "#6b7280",
                 lineHeight: "2",
-                paddingLeft: "20px",
+                listStyle: "none",
+                padding: 0,
                 marginTop: "20px",
+                textAlign: "center",
               }}
             >
               <li>Isla Mujeres Experience</li>
