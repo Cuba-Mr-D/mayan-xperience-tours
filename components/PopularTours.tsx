@@ -13,7 +13,7 @@ export default function PopularTours() {
     >
       <h2
         style={{
-          fontSize: "3rem",
+          fontSize: "2.5rem",
           marginBottom: "20px",
         }}
       >
@@ -32,9 +32,9 @@ export default function PopularTours() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(2, 1fr)",
-          gap: "20px",
-          maxWidth: "1000px",
+          gridTemplateColumns: "1fr",
+          gap: "30px",
+          maxWidth: "600px",
           margin: "0 auto",
         }}
       >
