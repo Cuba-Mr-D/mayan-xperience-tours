@@ -3,7 +3,7 @@ export default function WhyUs() {
     <section
       style={{
         padding: "100px 40px",
-        backgroundColor: "#f8fafc",
+        backgroundColor: "#ffffff",
       }}
     >
       <div

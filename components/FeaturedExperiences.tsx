@@ -4,7 +4,7 @@ export default function FeaturedExperiences() {
       id="experiences"
       style={{
         padding: "100px 40px",
-        backgroundColor: "#ffffff",
+        backgroundColor: "#f8fafc",
       }}
     >
       <div
