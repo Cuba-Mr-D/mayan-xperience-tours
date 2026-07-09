@@ -1,9 +1,62 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { LanguageCode } from "./translations";
+
+const storageKey = "mayan-xperience-language";
+
+const whatsappMessages: Record<LanguageCode, string> = {
+  en: "Hi! I would like more information about Mayan Xperience Tours.",
+  es: "Hola, me gustaría recibir más información sobre Mayan Xperience Tours.",
+  fr: "Bonjour, j’aimerais recevoir plus d’informations sur Mayan Xperience Tours.",
+};
+
+function isLanguageCode(value: unknown): value is LanguageCode {
+  return value === "en" || value === "es" || value === "fr";
+}
+
 export default function WhatsAppButton() {
+  const [language, setLanguage] = useState<LanguageCode>(() => {
+    if (typeof window === "undefined") {
+      return "en";
+    }
+
+    const savedLanguage = window.localStorage.getItem(storageKey);
+
+    if (isLanguageCode(savedLanguage)) {
+      return savedLanguage;
+    }
+
+    return "en";
+  });
+
+  useEffect(() => {
+    const handleLanguageChange = (event: Event) => {
+      const customEvent = event as CustomEvent<unknown>;
+
+      if (isLanguageCode(customEvent.detail)) {
+        setLanguage(customEvent.detail);
+      }
+    };
+
+    window.addEventListener(
+      "mayan-xperience-language-change",
+      handleLanguageChange,
+    );
+
+    return () => {
+      window.removeEventListener(
+        "mayan-xperience-language-change",
+        handleLanguageChange,
+      );
+    };
+  }, []);
+
+  const message = encodeURIComponent(whatsappMessages[language]);
+
   return (
     <a
-      href="https://wa.me/529842467762?text=Hello!%20I%20would%20like%20to%20get%20some%20information%20about%20your%20tours%20and%20activities."
+      href={`https://wa.me/529842467762?text=${message}`}
       target="_blank"
       rel="noopener noreferrer"
       style={{

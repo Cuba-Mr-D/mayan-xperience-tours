@@ -35,6 +35,11 @@ export default function HomePage() {
   useEffect(() => {
     window.localStorage.setItem(storageKey, language);
     document.documentElement.lang = language;
+    window.dispatchEvent(
+      new CustomEvent("mayan-xperience-language-change", {
+        detail: language,
+      }),
+    );
   }, [language]);
 
   return (
