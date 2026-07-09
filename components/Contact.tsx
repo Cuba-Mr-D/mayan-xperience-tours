@@ -1,36 +1,15 @@
+import { LanguageCode, translations } from "./translations";
+
 type ContactProps = {
-  language?: "en" | "es" | "fr";
+  language: LanguageCode;
 };
 
-export default function Contact({
-  language = "en",
-}: ContactProps) {
-  const content = {
-  en: {
-    title: "Ready to Discover the Riviera Maya?",
-    subtitle:
-      "Contact us and we'll help you choose the perfect experience.",
-    whatsapp: "📱 Contact on WhatsApp",
-  },
+export default function Contact({ language }: ContactProps) {
+  const t = translations[language].contact;
 
-  es: {
-    title: "¿Listo para Descubrir la Riviera Maya?",
-    subtitle:
-      "Contáctanos y te ayudaremos a elegir la experiencia perfecta.",
-    whatsapp: "📱 Contactar por WhatsApp",
-  },
-
-  fr: {
-    title: "Prêt à Découvrir la Riviera Maya ?",
-    subtitle:
-      "Contactez-nous et nous vous aiderons à choisir l'expérience parfaite.",
-    whatsapp: "📱 Contacter sur WhatsApp",
-  },
-};
-
-const t = content[language];
   return (
-    <section id="contact"
+    <section
+      id="contact"
       style={{
         padding: "100px 40px",
         textAlign: "center",
@@ -65,29 +44,29 @@ const t = content[language];
       >
         <p>📱 WhatsApp: +52 9842467762</p>
         <p>📧 Email: cuba.mr.d@gmail.com</p>
-        <p>📍 Riviera Maya, Mexico</p>
+        <p>{t.location}</p>
       </div>
 
       <a
-  href="https://wa.me/529842467762?text=Hi%20Daniel!%20I'm%20interested%20in%20your%20Riviera%20Maya%20tours.%20Could%20you%20please%20send%20me%20more%20information?"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <button
-    style={{
-      padding: "15px 35px",
-      fontSize: "18px",
-      borderRadius: "10px",
-      border: "none",
-      cursor: "pointer",
-      backgroundColor: "#25D366",
-      color: "white",
-      fontWeight: "bold",
-    }}
-  >
-    {t.whatsapp}
-  </button>
-</a>
+        href="https://wa.me/529842467762?text=Hi%20Daniel!%20I'm%20interested%20in%20your%20Riviera%20Maya%20tours.%20Could%20you%20please%20send%20me%20more%20information?"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button
+          style={{
+            padding: "15px 35px",
+            fontSize: "18px",
+            borderRadius: "10px",
+            border: "none",
+            cursor: "pointer",
+            backgroundColor: "#25D366",
+            color: "white",
+            fontWeight: "bold",
+          }}
+        >
+          {t.whatsapp}
+        </button>
+      </a>
     </section>
   );
 }

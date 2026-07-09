@@ -67,7 +67,7 @@ export default function IslaMujeresPage() {
               lineHeight: "1.8",
             }}
           >
-            Discover Playa Norte, internationally recognized as one of the world's
+            Discover Playa Norte, internationally recognized as one of the world&apos;s
             most beautiful beaches. Enjoy turquoise waters, soft white sand and the
             unique charm of Isla Mujeres in an experience tailored to your travel style.
           </p>

@@ -1,4 +1,12 @@
-export default function Hero() {
+import { LanguageCode, translations } from "./translations";
+
+type HeroProps = {
+  language: LanguageCode;
+};
+
+export default function Hero({ language }: HeroProps) {
+  const t = translations[language].hero;
+
   return (
     <section
       style={{
@@ -30,7 +38,7 @@ export default function Hero() {
             marginBottom: "20px",
           }}
         >
-          Experience Riviera Maya Like a Local
+          {t.title}
         </h1>
 
         <p
@@ -39,7 +47,7 @@ export default function Hero() {
             marginBottom: "35px",
           }}
         >
-          Handpicked tours, hidden gems and unforgettable adventures.
+          {t.subtitle}
         </p>
 
         <div
@@ -61,7 +69,7 @@ export default function Hero() {
               fontWeight: "bold",
             }}
           >
-            Explore Tours
+            {t.exploreTours}
           </a>
 
           <a
@@ -75,7 +83,7 @@ export default function Hero() {
               fontWeight: "bold",
             }}
           >
-            Contact Us
+            {t.contactUs}
           </a>
         </div>
 

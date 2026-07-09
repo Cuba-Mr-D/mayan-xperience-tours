@@ -2,9 +2,15 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { LanguageCode, translations } from "./translations";
 
-export default function PopularTours() {
+type PopularToursProps = {
+  language: LanguageCode;
+};
+
+export default function PopularTours({ language }: PopularToursProps) {
   const [isMobile, setIsMobile] = useState(false);
+  const t = translations[language].popularTours;
 
   useEffect(() => {
     const checkScreen = () => {
@@ -33,7 +39,7 @@ export default function PopularTours() {
           marginBottom: "20px",
         }}
       >
-        Most Popular Tours
+        {t.title}
       </h2>
 
       <p
@@ -42,7 +48,7 @@ export default function PopularTours() {
           marginBottom: "50px",
         }}
       >
-        Discover our most requested experiences in the Riviera Maya.
+        {t.subtitle}
       </p>
 
       <div
@@ -84,7 +90,7 @@ export default function PopularTours() {
 
             <div style={{ padding: "20px" }}>
               <h3>🏝️ Isla Mujeres</h3>
-              <p>Catamaran sailing, snorkeling and turquoise waters.</p>
+              <p>{t.tours.islaMujeres}</p>
 
               <p
                 style={{
@@ -93,7 +99,7 @@ export default function PopularTours() {
                   fontWeight: "bold",
                 }}
               >
-                View Experience →
+                {t.viewExperience} →
               </p>
             </div>
           </div>
@@ -127,7 +133,7 @@ export default function PopularTours() {
 
             <div style={{ padding: "20px" }}>
               <h3>🏛️ Chichén Itzá</h3>
-              <p>One of the New Seven Wonders and a symbol of Mayan heritage.</p>
+              <p>{t.tours.chichenItza}</p>
 
               <p
                 style={{
@@ -136,7 +142,7 @@ export default function PopularTours() {
                   fontWeight: "bold",
                 }}
               >
-                View Experience →
+                {t.viewExperience} →
               </p>
             </div>
           </div>
@@ -170,7 +176,7 @@ export default function PopularTours() {
 
             <div style={{ padding: "20px" }}>
               <h3>🌴 Tulum</h3>
-              <p>Clifftop ruins overlooking the Caribbean Sea.</p>
+              <p>{t.tours.tulum}</p>
 
               <p
                 style={{
@@ -179,7 +185,7 @@ export default function PopularTours() {
                   fontWeight: "bold",
                 }}
               >
-                View Experience →
+                {t.viewExperience} →
               </p>
             </div>
           </div>
@@ -214,7 +220,7 @@ export default function PopularTours() {
             <div style={{ padding: "20px" }}>
 
               <h3>💦 Cenotes Experience</h3>
-              <p>Swim in crystal-clear waters surrounded by nature.</p>
+              <p>{t.tours.cenotes}</p>
 
               <p
                 style={{
@@ -223,7 +229,7 @@ export default function PopularTours() {
                   fontWeight: "bold",
                 }}
               >
-                View Experience →
+                {t.viewExperience} →
               </p>
             </div>
           </div>

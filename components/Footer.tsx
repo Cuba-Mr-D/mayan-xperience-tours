@@ -1,4 +1,12 @@
-export default function Footer() {
+import { LanguageCode, translations } from "./translations";
+
+type FooterProps = {
+  language: LanguageCode;
+};
+
+export default function Footer({ language }: FooterProps) {
+  const t = translations[language].footer;
+
   return (
     <footer
       style={{
@@ -22,7 +30,7 @@ export default function Footer() {
           marginBottom: "20px",
         }}
       >
-        Personalized tours and experiences in Riviera Maya.
+        {t.description}
       </p>
 
       <p
@@ -30,7 +38,7 @@ export default function Footer() {
           marginBottom: "20px",
         }}
       >
-        Experiences • About • Contact
+        {t.links}
       </p>
 
       <p
@@ -39,7 +47,7 @@ export default function Footer() {
           opacity: 0.7,
         }}
       >
-        © 2026 Mayan Xperience Tours. All Rights Reserved.
+        {t.rights}
       </p>
     </footer>
   );

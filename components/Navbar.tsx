@@ -1,11 +1,19 @@
 "use client";
 
 import { useState } from "react";
+import { LanguageCode, languages, translations } from "./translations";
 
+type NavbarProps = {
+  language: LanguageCode;
+  onLanguageChange: (language: LanguageCode) => void;
+};
 
-
-export default function Navbar() {
+export default function Navbar({
+  language,
+  onLanguageChange,
+}: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const t = translations[language].nav;
 
   return (
     <>
@@ -35,6 +43,9 @@ export default function Navbar() {
         </div>
 
         <button
+          type="button"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          data-testid="mobile-menu-button"
           onClick={() => setMenuOpen(!menuOpen)}
           style={{
             background: "none",
@@ -76,7 +87,7 @@ export default function Navbar() {
             }}
             onClick={() => setMenuOpen(false)}
           >
-            Experiences
+            {t.experiences}
           </a>
 
           <a
@@ -87,7 +98,7 @@ export default function Navbar() {
             }}
             onClick={() => setMenuOpen(false)}
           >
-            About
+            {t.about}
           </a>
 
           <a
@@ -98,7 +109,7 @@ export default function Navbar() {
             }}
             onClick={() => setMenuOpen(false)}
           >
-            Contact
+            {t.contact}
           </a>
 
           <hr
@@ -108,7 +119,59 @@ export default function Navbar() {
             }}
           />
 
-          
+          <div
+            aria-label={t.languageLabel}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "10px",
+            }}
+          >
+            {languages.map((languageOption) => {
+              const isSelected = language === languageOption.code;
+
+              return (
+                <button
+                  key={languageOption.code}
+                  type="button"
+                  aria-pressed={isSelected}
+                  data-testid={`language-${languageOption.code}`}
+                  onClick={() => onLanguageChange(languageOption.code)}
+                  style={{
+                    width: "100%",
+                    padding: "10px 12px",
+                    borderRadius: "8px",
+                    border: isSelected
+                      ? "1px solid #f2c94c"
+                      : "1px solid #ffffff33",
+                    backgroundColor: isSelected ? "#f2c94c" : "transparent",
+                    color: isSelected ? "#021024" : "white",
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    fontSize: "1rem",
+                    fontWeight: isSelected ? "700" : "500",
+                    textAlign: "left",
+                  }}
+                >
+                  <img
+                    src={languageOption.flagSrc}
+                    alt={languageOption.flagAlt}
+                    width={24}
+                    height={16}
+                    style={{
+                      borderRadius: "3px",
+                      boxShadow: "0 0 0 1px rgba(255,255,255,0.35)",
+                      flexShrink: 0,
+                      objectFit: "cover",
+                    }}
+                  />
+                  <span>{languageOption.label}</span>
+                </button>
+              );
+            })}
+          </div>
         </div>
       )}
     </>

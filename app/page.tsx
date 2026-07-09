@@ -1,35 +1,5 @@
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import PopularTours from "../components/PopularTours";
-import WhyUs from "../components/WhyUs";
-import FeaturedExperiences from "../components/FeaturedExperiences";
-import Testimonials from "../components/Testimonials";
-import Contact from "../components/Contact";
-import Footer from "../components/Footer";
+import HomePage from "../components/HomePage";
 
 export default function Home() {
-  return (
-    <main>
-      <Navbar />
-      <Hero />
-
-      {/* Most Popular Tours */}
-      <PopularTours />
-
-
-      {/* Travel Styles / Featured Experiences */}
-      <FeaturedExperiences />
-
-      {/* Why Travel With Us */}
-      <WhyUs />
-
-      {/* Testimonials */}
-      <Testimonials />
-
-      {/* Contact */}
-      <Contact />
-
-      <Footer />
-    </main>
-  );
+  return <HomePage />;
 }

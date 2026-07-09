@@ -1,4 +1,12 @@
-export default function Testimonials() {
+import { LanguageCode, translations } from "./translations";
+
+type TestimonialsProps = {
+  language: LanguageCode;
+};
+
+export default function Testimonials({ language }: TestimonialsProps) {
+  const t = translations[language].testimonials;
+
   return (
     <section id="about"
       style={{
@@ -13,7 +21,7 @@ export default function Testimonials() {
           marginBottom: "20px",
         }}
       >
-        What Our Travelers Say
+        {t.title}
       </h2>
 
       <p
@@ -22,7 +30,7 @@ export default function Testimonials() {
           marginBottom: "60px",
         }}
       >
-        Real experiences from guests who explored the Riviera Maya with us.
+        {t.subtitle}
       </p>
 
       <div
@@ -34,58 +42,23 @@ export default function Testimonials() {
           margin: "0 auto",
         }}
       >
-        <div
-          style={{
-            backgroundColor: "white",
-            padding: "30px",
-            borderRadius: "15px",
-            boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
-          }}
-        >
-          <p>
-            "Amazing experience in Isla Mujeres. Everything was perfectly
-            organized."
-          </p>
+        {t.items.map((testimonial) => (
+          <div
+            key={testimonial.author}
+            style={{
+              backgroundColor: "white",
+              padding: "30px",
+              borderRadius: "15px",
+              boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
+            }}
+          >
+            <p>{`"${testimonial.quote}"`}</p>
 
-          <h4>⭐⭐⭐⭐⭐</h4>
+            <h4>⭐⭐⭐⭐⭐</h4>
 
-          <strong>Sarah – Canada</strong>
-        </div>
-
-        <div
-          style={{
-            backgroundColor: "white",
-            padding: "30px",
-            borderRadius: "15px",
-            boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
-          }}
-        >
-          <p>
-            "Daniel helped us choose the perfect tour for our family. Highly
-            recommended."
-          </p>
-
-          <h4>⭐⭐⭐⭐⭐</h4>
-
-          <strong>Pierre – France</strong>
-        </div>
-
-        <div
-          style={{
-            backgroundColor: "white",
-            padding: "30px",
-            borderRadius: "15px",
-            boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
-          }}
-        >
-          <p>
-            "Best service we found in Riviera Maya. Friendly and professional."
-          </p>
-
-          <h4>⭐⭐⭐⭐⭐</h4>
-
-          <strong>Michael – USA</strong>
-        </div>
+            <strong>{testimonial.author}</strong>
+          </div>
+        ))}
       </div>
     </section>
   );

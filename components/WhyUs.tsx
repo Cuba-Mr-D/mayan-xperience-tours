@@ -1,4 +1,12 @@
-export default function WhyUs() {
+import { LanguageCode, translations } from "./translations";
+
+type WhyUsProps = {
+  language: LanguageCode;
+};
+
+export default function WhyUs({ language }: WhyUsProps) {
+  const t = translations[language].whyUs;
+
   return (
     <section
       style={{
@@ -19,7 +27,7 @@ export default function WhyUs() {
             marginBottom: "20px",
           }}
         >
-          Why Travel With Us?
+          {t.title}
         </h2>
 
         <p
@@ -29,7 +37,7 @@ export default function WhyUs() {
             marginBottom: "60px",
           }}
         >
-          Personalized experiences designed by Riviera Maya experts.
+          {t.subtitle}
         </p>
 
         <div
@@ -39,29 +47,13 @@ export default function WhyUs() {
             gap: "25px",
           }}
         >
-          <div style={{ textAlign: "center" }}>
-            <h3>🌴</h3>
-            <h4>Local Experts</h4>
-            <p>We know the Riviera Maya inside and out.</p>
-          </div>
-
-          <div style={{ textAlign: "center" }}>
-            <h3>⭐</h3>
-            <h4>Top Experiences</h4>
-            <p>Only the best tours and activities.</p>
-          </div>
-
-          <div style={{ textAlign: "center" }}>
-            <h3>🤝</h3>
-            <h4>Personal Service</h4>
-            <p>Real people helping you every step.</p>
-          </div>
-
-          <div style={{ textAlign: "center" }}>
-            <h3>🌎</h3>
-            <h4>Multilingual</h4>
-            <p>English, Spanish and French support.</p>
-          </div>
+          {t.reasons.map((reason) => (
+            <div key={reason.title} style={{ textAlign: "center" }}>
+              <h3>{reason.icon}</h3>
+              <h4>{reason.title}</h4>
+              <p>{reason.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

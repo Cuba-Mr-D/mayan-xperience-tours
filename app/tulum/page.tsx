@@ -65,7 +65,7 @@ export default function TulumPage() {
             }}
           >
             Explore ancient Mayan ruins perched above turquoise Caribbean waters
-            and discover one of Mexico's most iconic destinations. A perfect
+            and discover one of Mexico&apos;s most iconic destinations. A perfect
             blend of history, culture and breathtaking coastal scenery.
           </p>
         </div>

@@ -113,7 +113,7 @@ export default function CenotesPage() {
             color: "#4b5563",
           }}
         >
-          Experience one of the Riviera Maya's most unique natural attractions.
+          Experience one of the Riviera Maya&apos;s most unique natural attractions.
           Cenotes are freshwater sinkholes formed over thousands of years,
           offering an incredible opportunity to swim, explore and enjoy nature
           in a truly magical setting.
@@ -155,7 +155,7 @@ export default function CenotesPage() {
         >
           Cenotes are one of the most iconic natural treasures of the Yucatán
           Peninsula. They provide a refreshing escape, incredible scenery and a
-          unique connection to the region's geological and cultural history.
+          unique connection to the region&apos;s geological and cultural history.
         </p>
 
         <div
