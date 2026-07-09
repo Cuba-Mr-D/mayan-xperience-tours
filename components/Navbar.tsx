@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -106,49 +108,7 @@ export default function Navbar() {
             }}
           />
 
-          <div
-            style={{
-              display: "flex",
-              gap: "10px",
-              justifyContent: "center",
-            }}
-          >
-            <button
-              style={{
-                background: "none",
-                border: "none",
-                color: "white",
-                cursor: "pointer",
-                fontSize: "1rem",
-              }}
-            >
-              🇺🇸 EN
-            </button>
-
-            <button
-              style={{
-                background: "none",
-                border: "none",
-                color: "white",
-                cursor: "pointer",
-                fontSize: "1rem",
-              }}
-            >
-              🇲🇽 ES
-            </button>
-
-            <button
-              style={{
-                background: "none",
-                border: "none",
-                color: "white",
-                cursor: "pointer",
-                fontSize: "1rem",
-              }}
-            >
-              🇫🇷 FR
-            </button>
-          </div>
+          
         </div>
       )}
     </>
