@@ -1,5 +1,38 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import Gallery from "@/components/Gallery";
+
+export const metadata: Metadata = {
+  title: "Chichén Itzá Tours | Mayan Xperience Tours",
+  description:
+    "Visit Chichén Itzá from the Riviera Maya with guided cultural experiences, the Kukulkan Pyramid and personalized tour recommendations.",
+  openGraph: {
+    title: "Chichén Itzá Tours | Mayan Xperience Tours",
+    description:
+      "Visit Chichén Itzá from the Riviera Maya with guided cultural experiences, the Kukulkan Pyramid and personalized tour recommendations.",
+    url: "/chichen-itza",
+    images: [
+      {
+        url: "/tours/chichen.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Chichén Itzá Kukulkan Pyramid tour experience",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Chichén Itzá Tours | Mayan Xperience Tours",
+    description:
+      "Visit Chichén Itzá from the Riviera Maya with guided cultural experiences, the Kukulkan Pyramid and personalized tour recommendations.",
+    images: [
+      {
+        url: "/tours/chichen.jpg",
+        alt: "Chichén Itzá Kukulkan Pyramid tour experience",
+      },
+    ],
+  },
+};
 
 export default function ChichenItzaPage() {
   const galleryImages = [

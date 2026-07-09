@@ -1,5 +1,38 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import Gallery from "@/components/Gallery";
+
+export const metadata: Metadata = {
+  title: "Cenotes Tours | Riviera Maya Adventure Experiences",
+  description:
+    "Discover cenotes tours in the Riviera Maya with crystal-clear freshwater, cave formations, swimming adventures and guided local experiences.",
+  openGraph: {
+    title: "Cenotes Tours | Riviera Maya Adventure Experiences",
+    description:
+      "Discover cenotes tours in the Riviera Maya with crystal-clear freshwater, cave formations, swimming adventures and guided local experiences.",
+    url: "/cenotes",
+    images: [
+      {
+        url: "/tours/cenotes-gallery/cenote1.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Riviera Maya cenote swimming adventure",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cenotes Tours | Riviera Maya Adventure Experiences",
+    description:
+      "Discover cenotes tours in the Riviera Maya with crystal-clear freshwater, cave formations, swimming adventures and guided local experiences.",
+    images: [
+      {
+        url: "/tours/cenotes-gallery/cenote1.jpg",
+        alt: "Riviera Maya cenote swimming adventure",
+      },
+    ],
+  },
+};
 
 export default function CenotesPage() {
   const galleryImages = [

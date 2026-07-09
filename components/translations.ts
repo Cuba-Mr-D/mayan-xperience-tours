@@ -128,7 +128,7 @@ export const translations = {
       languageLabel: "Seleccionar idioma",
     },
     hero: {
-      title: "Vive la Riviera Maya Como Local",
+      title: "Experimenta la Riviera Maya como un local",
       subtitle:
         "Tours seleccionados, joyas escondidas y aventuras inolvidables.",
       exploreTours: "Explorar Tours",
@@ -238,7 +238,7 @@ export const translations = {
       languageLabel: "Choisir la langue",
     },
     hero: {
-      title: "Vivez la Riviera Maya Comme un Local",
+      title: "Découvre la Riviera Maya comme un local",
       subtitle:
         "Excursions sélectionnées, trésors cachés et aventures inoubliables.",
       exploreTours: "Explorer les Tours",

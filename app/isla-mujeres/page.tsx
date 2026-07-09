@@ -1,5 +1,38 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import Gallery from "@/components/Gallery";
+
+export const metadata: Metadata = {
+  title: "Isla Mujeres Tours | Mayan Xperience Tours",
+  description:
+    "Discover Isla Mujeres tours from the Riviera Maya with turquoise waters, Playa Norte, snorkeling, catamaran experiences and private options.",
+  openGraph: {
+    title: "Isla Mujeres Tours | Mayan Xperience Tours",
+    description:
+      "Discover Isla Mujeres tours from the Riviera Maya with turquoise waters, Playa Norte, snorkeling, catamaran experiences and private options.",
+    url: "/isla-mujeres",
+    images: [
+      {
+        url: "/tours/isla-mujeres.png",
+        width: 1200,
+        height: 630,
+        alt: "Isla Mujeres turquoise water tour experience",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Isla Mujeres Tours | Mayan Xperience Tours",
+    description:
+      "Discover Isla Mujeres tours from the Riviera Maya with turquoise waters, Playa Norte, snorkeling, catamaran experiences and private options.",
+    images: [
+      {
+        url: "/tours/isla-mujeres.png",
+        alt: "Isla Mujeres turquoise water tour experience",
+      },
+    ],
+  },
+};
 
 export default function IslaMujeresPage() {
   const galleryImages = [

@@ -1,5 +1,38 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import Gallery from "@/components/Gallery";
+
+export const metadata: Metadata = {
+  title: "Tulum Tours | Mayan Ruins & Riviera Maya Experiences",
+  description:
+    "Explore Tulum tours in the Riviera Maya with ancient Mayan ruins, Caribbean views, guided experiences and personalized recommendations.",
+  openGraph: {
+    title: "Tulum Tours | Mayan Ruins & Riviera Maya Experiences",
+    description:
+      "Explore Tulum tours in the Riviera Maya with ancient Mayan ruins, Caribbean views, guided experiences and personalized recommendations.",
+    url: "/tulum",
+    images: [
+      {
+        url: "/tours/tulum-gallery/tulum1.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Tulum Mayan ruins overlooking the Caribbean Sea",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tulum Tours | Mayan Ruins & Riviera Maya Experiences",
+    description:
+      "Explore Tulum tours in the Riviera Maya with ancient Mayan ruins, Caribbean views, guided experiences and personalized recommendations.",
+    images: [
+      {
+        url: "/tours/tulum-gallery/tulum1.jpg",
+        alt: "Tulum Mayan ruins overlooking the Caribbean Sea",
+      },
+    ],
+  },
+};
 
 export default function TulumPage() {
   const galleryImages = [
