@@ -1,6 +1,122 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import Gallery from "@/components/Gallery";
+import type { LanguageCode } from "@/components/translations";
+
+type TourPageProps = {
+  searchParams: Promise<{ lang?: string | string[] }>;
+};
+
+const tourTranslations = {
+  en: {
+    title: "Tulum",
+    subtitle:
+      "Explore ancient Mayan ruins perched above turquoise Caribbean waters and discover one of Mexico's most iconic destinations. A perfect blend of history, culture and breathtaking coastal scenery.",
+    galleryTitle: "Experience Gallery",
+    whatToExpectTitle: "What to Expect",
+    whatToExpect:
+      "Experience the perfect combination of history, culture and Caribbean beauty. Explore the famous archaeological site overlooking turquoise waters, learn about the Mayan civilization and capture incredible photos from one of the most scenic locations in the Riviera Maya.",
+    highlightsTitle: "Highlights",
+    highlights: [
+      "Ancient Ruins Overlooking the Caribbean Sea",
+      "Iconic Tulum Castle",
+      "Professional Guided Experience",
+      "Free Time for Photos",
+      "Unique Coastal Archaeological Site",
+    ],
+    perfectForTitle: "Perfect For",
+    perfectFor: [
+      "📸 Photography Enthusiasts",
+      "❤️ Couples",
+      "👨‍👩‍👧‍👦 Families",
+      "🌴 Beach Lovers",
+      "✨ Cultural Explorers",
+    ],
+    recommendationTitle: "Why We Recommend This Experience",
+    recommendation:
+      "Tulum offers one of the most unique landscapes in Mexico, combining ancient history with stunning Caribbean scenery. It is one of the most photographed destinations in the Riviera Maya and an essential stop for visitors looking for culture and natural beauty.",
+    ctaTitle: "Ready to Explore Tulum?",
+    ctaText:
+      "Contact us today for pricing, availability and personalized recommendations.",
+    whatsappButton: "Get Personalized Quote",
+    whatsappMessage:
+      "Hello Mayan Xperience Tours! I am interested in the Tulum Experience.",
+  },
+  es: {
+    title: "Tulum",
+    subtitle:
+      "Explora antiguas ruinas mayas sobre aguas turquesa del Caribe y descubre uno de los destinos más icónicos de México. Una combinación perfecta de historia, cultura y paisajes costeros impresionantes.",
+    galleryTitle: "Galería de la Experiencia",
+    whatToExpectTitle: "Qué Puedes Esperar",
+    whatToExpect:
+      "Vive la combinación perfecta de historia, cultura y belleza caribeña. Explora el famoso sitio arqueológico con vista a aguas turquesa, aprende sobre la civilización maya y captura fotos increíbles desde uno de los lugares más escénicos de la Riviera Maya.",
+    highlightsTitle: "Lo Más Destacado",
+    highlights: [
+      "Ruinas Antiguas con Vista al Mar Caribe",
+      "El Icónico Castillo de Tulum",
+      "Experiencia Guiada Profesional",
+      "Tiempo Libre para Fotos",
+      "Sitio Arqueológico Costero Único",
+    ],
+    perfectForTitle: "Ideal Para",
+    perfectFor: [
+      "📸 Amantes de la Fotografía",
+      "❤️ Parejas",
+      "👨‍👩‍👧‍👦 Familias",
+      "🌴 Amantes de la Playa",
+      "✨ Exploradores Culturales",
+    ],
+    recommendationTitle: "Por Qué Recomendamos Esta Experiencia",
+    recommendation:
+      "Tulum ofrece uno de los paisajes más únicos de México, combinando historia antigua con una impresionante vista caribeña. Es uno de los destinos más fotografiados de la Riviera Maya y una parada esencial para visitantes que buscan cultura y belleza natural.",
+    ctaTitle: "¿Listo para Explorar Tulum?",
+    ctaText:
+      "Contáctanos hoy para consultar precios, disponibilidad y recomendaciones personalizadas.",
+    whatsappButton: "Solicitar Cotización Personalizada",
+    whatsappMessage:
+      "Hola Mayan Xperience Tours! Estoy interesado en la Experiencia Tulum.",
+  },
+  fr: {
+    title: "Tulum",
+    subtitle:
+      "Explorez d'anciennes ruines mayas dominant les eaux turquoise des Caraïbes et découvrez l'une des destinations les plus emblématiques du Mexique. Un parfait mélange d'histoire, de culture et de paysages côtiers à couper le souffle.",
+    galleryTitle: "Galerie de l'Expérience",
+    whatToExpectTitle: "À Quoi Vous Attendre",
+    whatToExpect:
+      "Vivez la combinaison parfaite entre histoire, culture et beauté caribéenne. Explorez le célèbre site archéologique surplombant les eaux turquoise, découvrez la civilisation maya et prenez des photos incroyables depuis l'un des lieux les plus spectaculaires de la Riviera Maya.",
+    highlightsTitle: "Points Forts",
+    highlights: [
+      "Ruines Anciennes avec Vue sur la Mer des Caraïbes",
+      "L'Iconique Château de Tulum",
+      "Expérience Guidée Professionnelle",
+      "Temps Libre pour les Photos",
+      "Site Archéologique Côtier Unique",
+    ],
+    perfectForTitle: "Parfait Pour",
+    perfectFor: [
+      "📸 Passionnés de Photographie",
+      "❤️ Couples",
+      "👨‍👩‍👧‍👦 Familles",
+      "🌴 Amoureux de la Plage",
+      "✨ Explorateurs Culturels",
+    ],
+    recommendationTitle: "Pourquoi Nous Recommandons Cette Expérience",
+    recommendation:
+      "Tulum offre l'un des paysages les plus uniques du Mexique, associant histoire ancienne et décor caribéen spectaculaire. C'est l'une des destinations les plus photographiées de la Riviera Maya et une étape essentielle pour les visiteurs en quête de culture et de beauté naturelle.",
+    ctaTitle: "Prêt à Explorer Tulum ?",
+    ctaText:
+      "Contactez-nous dès aujourd'hui pour les tarifs, les disponibilités et des recommandations personnalisées.",
+    whatsappButton: "Obtenir un Devis Personnalisé",
+    whatsappMessage:
+      "Bonjour Mayan Xperience Tours! Je suis intéressé par l'Expérience Tulum.",
+  },
+} as const;
+
+function getLanguage(value: string | string[] | undefined): LanguageCode {
+  const lang = Array.isArray(value) ? value[0] : value;
+
+  return lang === "es" || lang === "fr" ? lang : "en";
+}
 
 export const metadata: Metadata = {
   title: "Tulum Tours | Mayan Ruins & Riviera Maya Experiences",
@@ -34,7 +150,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function TulumPage() {
+export default async function TulumPage({ searchParams }: TourPageProps) {
+  const language = getLanguage((await searchParams).lang);
+  const t = tourTranslations[language];
   const galleryImages = [
     "/tours/tulum-gallery/tulum1.jpg",
     "/tours/tulum-gallery/tulum2.jpg",
@@ -87,7 +205,7 @@ export default function TulumPage() {
               marginBottom: "15px",
             }}
           >
-            Tulum
+            {t.title}
           </h1>
 
           <p
@@ -97,9 +215,7 @@ export default function TulumPage() {
               lineHeight: "1.8",
             }}
           >
-            Explore ancient Mayan ruins perched above turquoise Caribbean waters
-            and discover one of Mexico&apos;s most iconic destinations. A perfect
-            blend of history, culture and breathtaking coastal scenery.
+            {t.subtitle}
           </p>
         </div>
       </section>
@@ -119,7 +235,7 @@ export default function TulumPage() {
             fontSize: "2.5rem",
           }}
         >
-          Experience Gallery
+          {t.galleryTitle}
         </h2>
 
         <Gallery images={galleryImages} />
@@ -133,7 +249,7 @@ export default function TulumPage() {
           padding: "20px",
         }}
       >
-        <h2>What to Expect</h2>
+        <h2>{t.whatToExpectTitle}</h2>
 
         <p
           style={{
@@ -141,38 +257,31 @@ export default function TulumPage() {
             color: "#4b5563",
           }}
         >
-          Experience the perfect combination of history, culture and Caribbean
-          beauty. Explore the famous archaeological site overlooking turquoise
-          waters, learn about the Mayan civilization and capture incredible
-          photos from one of the most scenic locations in the Riviera Maya.
+          {t.whatToExpect}
         </p>
 
         <h2 style={{ marginTop: "50px" }}>
-          Highlights
+          {t.highlightsTitle}
         </h2>
 
         <ul style={{ lineHeight: "2" }}>
-          <li>Ancient Ruins Overlooking the Caribbean Sea</li>
-          <li>Iconic Tulum Castle</li>
-          <li>Professional Guided Experience</li>
-          <li>Free Time for Photos</li>
-          <li>Unique Coastal Archaeological Site</li>
+          {t.highlights.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
         </ul>
 
         <h2 style={{ marginTop: "50px" }}>
-          Perfect For
+          {t.perfectForTitle}
         </h2>
 
         <ul style={{ lineHeight: "2" }}>
-          <li>📸 Photography Enthusiasts</li>
-          <li>❤️ Couples</li>
-          <li>👨‍👩‍👧‍👦 Families</li>
-          <li>🌴 Beach Lovers</li>
-          <li>✨ Cultural Explorers</li>
+          {t.perfectFor.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
         </ul>
 
         <h2 style={{ marginTop: "50px" }}>
-          Why We Recommend This Experience
+          {t.recommendationTitle}
         </h2>
 
         <p
@@ -181,10 +290,7 @@ export default function TulumPage() {
             color: "#4b5563",
           }}
         >
-          Tulum offers one of the most unique landscapes in Mexico, combining
-          ancient history with stunning Caribbean scenery. It is one of the
-          most photographed destinations in the Riviera Maya and an essential
-          stop for visitors looking for culture and natural beauty.
+          {t.recommendation}
         </p>
 
         <div
@@ -199,7 +305,7 @@ export default function TulumPage() {
               marginBottom: "15px",
             }}
           >
-            Ready to Explore Tulum?
+            {t.ctaTitle}
           </h2>
 
           <p
@@ -208,10 +314,10 @@ export default function TulumPage() {
               marginBottom: "30px",
             }}
           >
-            Contact us today for pricing, availability and personalized recommendations.
+            {t.ctaText}
           </p>
           <a
-            href="https://wa.me/529842467762?text=Hello%20Mayan%20Xperience%20Tours!%20I%20am%20interested%20in%20the%20Tulum%20Experience."
+            href={`https://wa.me/529842467762?text=${encodeURIComponent(t.whatsappMessage)}`}
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -224,7 +330,7 @@ export default function TulumPage() {
               fontSize: "1.1rem",
             }}
           >
-            Get Personalized Quote
+            {t.whatsappButton}
           </a>
         </div>
       </section>

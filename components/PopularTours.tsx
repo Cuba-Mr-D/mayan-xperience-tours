@@ -11,6 +11,7 @@ type PopularToursProps = {
 export default function PopularTours({ language }: PopularToursProps) {
   const [isMobile, setIsMobile] = useState(false);
   const t = translations[language].popularTours;
+  const languageQuery = `?lang=${language}`;
 
   useEffect(() => {
     const checkScreen = () => {
@@ -64,7 +65,7 @@ export default function PopularTours({ language }: PopularToursProps) {
       >
         {/* Isla Mujeres */}
         <Link
-          href="/isla-mujeres"
+          href={`/isla-mujeres${languageQuery}`}
           style={{
             textDecoration: "none",
             color: "inherit",
@@ -107,7 +108,7 @@ export default function PopularTours({ language }: PopularToursProps) {
 
         {/* Chichen Itza */}
         <Link
-          href="/chichen-itza"
+          href={`/chichen-itza${languageQuery}`}
           style={{
             textDecoration: "none",
             color: "inherit",
@@ -150,7 +151,7 @@ export default function PopularTours({ language }: PopularToursProps) {
 
         {/* Tulum */}
         <Link
-          href="/tulum"
+          href={`/tulum${languageQuery}`}
           style={{
             textDecoration: "none",
             color: "inherit",
@@ -193,7 +194,7 @@ export default function PopularTours({ language }: PopularToursProps) {
 
         {/* Cenotes */}
         <Link
-          href="/cenotes"
+          href={`/cenotes${languageQuery}`}
           style={{
             textDecoration: "none",
             color: "inherit",
