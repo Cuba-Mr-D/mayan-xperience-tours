@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import Gallery from "@/components/Gallery";
+import TourNavbar from "@/components/TourNavbar";
 import type { LanguageCode } from "@/components/translations";
 
 type TourPageProps = {
@@ -162,6 +163,8 @@ export default async function IslaMujeresPage({ searchParams }: TourPageProps) {
         minHeight: "100vh",
       }}
     >
+      <TourNavbar currentPath="/isla-mujeres" initialLanguage={language} />
+
       {/* Hero */}
       <section
         style={{

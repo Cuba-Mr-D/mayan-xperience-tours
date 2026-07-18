@@ -6,11 +6,23 @@ import { LanguageCode, languages, translations } from "./translations";
 type NavbarProps = {
   language: LanguageCode;
   onLanguageChange: (language: LanguageCode) => void;
+  logoHref?: string;
+  menuHrefs?: {
+    experiences: string;
+    about: string;
+    contact: string;
+  };
 };
 
 export default function Navbar({
   language,
   onLanguageChange,
+  logoHref,
+  menuHrefs = {
+    experiences: "#experiences",
+    about: "#about",
+    contact: "#contact",
+  },
 }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const t = translations[language].nav;
@@ -39,7 +51,19 @@ export default function Navbar({
             letterSpacing: "1px",
           }}
         >
-          MAYAN XPERIENCE
+          {logoHref ? (
+            <a
+              href={logoHref}
+              style={{
+                color: "inherit",
+                textDecoration: "none",
+              }}
+            >
+              MAYAN XPERIENCE
+            </a>
+          ) : (
+            "MAYAN XPERIENCE"
+          )}
         </div>
 
         <button
@@ -78,7 +102,7 @@ export default function Navbar({
           }}
         >
           <a
-            href="#experiences"
+            href={menuHrefs.experiences}
             style={{
               color: "white",
               textDecoration: "none",
@@ -91,7 +115,7 @@ export default function Navbar({
           </a>
 
           <a
-            href="#about"
+            href={menuHrefs.about}
             style={{
               color: "white",
               textDecoration: "none",
@@ -102,7 +126,7 @@ export default function Navbar({
           </a>
 
           <a
-            href="#contact"
+            href={menuHrefs.contact}
             style={{
               color: "white",
               textDecoration: "none",

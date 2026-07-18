@@ -17,10 +17,24 @@ function isLanguageCode(value: string | null): value is LanguageCode {
   return value === "en" || value === "es" || value === "fr";
 }
 
+function getUrlLanguage() {
+  if (typeof window === "undefined") {
+    return null;
+  }
+
+  return new URLSearchParams(window.location.search).get("lang");
+}
+
 export default function HomePage() {
   const [language, setLanguage] = useState<LanguageCode>(() => {
     if (typeof window === "undefined") {
       return "en";
+    }
+
+    const urlLanguage = getUrlLanguage();
+
+    if (isLanguageCode(urlLanguage)) {
+      return urlLanguage;
     }
 
     const savedLanguage = window.localStorage.getItem(storageKey);
@@ -35,6 +49,13 @@ export default function HomePage() {
   useEffect(() => {
     window.localStorage.setItem(storageKey, language);
     document.documentElement.lang = language;
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", language);
+    window.history.replaceState(
+      null,
+      "",
+      `${url.pathname}?${url.searchParams}${url.hash}`,
+    );
     window.dispatchEvent(
       new CustomEvent("mayan-xperience-language-change", {
         detail: language,
