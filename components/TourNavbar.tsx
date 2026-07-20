@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { buildLocalizedHref } from "@/lib/links";
 import Navbar from "./Navbar";
 import type { LanguageCode } from "./translations";
 
@@ -38,11 +39,11 @@ export default function TourNavbar({
     <Navbar
       language={language}
       onLanguageChange={handleLanguageChange}
-      logoHref={`/?lang=${language}`}
+      logoHref={buildLocalizedHref("/", language)}
       menuHrefs={{
-        experiences: `/?lang=${language}#popular-tours`,
-        about: `/?lang=${language}#about`,
-        contact: `/?lang=${language}#contact`,
+        experiences: buildLocalizedHref("/experiences", language),
+        about: buildLocalizedHref("/#about", language),
+        contact: buildLocalizedHref("/#contact", language),
       }}
     />
   );

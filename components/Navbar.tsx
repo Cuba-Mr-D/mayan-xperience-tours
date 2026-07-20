@@ -20,7 +20,7 @@ export default function Navbar({
   onLanguageChange,
   logoHref,
   menuHrefs = {
-    experiences: "#experiences",
+    experiences: "/experiences",
     about: "#about",
     contact: "#contact",
   },

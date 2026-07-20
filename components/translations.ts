@@ -24,12 +24,26 @@ export const translations = {
       title: "Most Popular Tours",
       subtitle: "Discover our most requested experiences in the Riviera Maya.",
       viewExperience: "View Experience",
+      viewAllPrompt: "Discover more unforgettable experiences",
+      viewAllExperiences: "View All Experiences",
+      badges: {
+        islaMujeres: "Best Seller",
+        chichenItza: "World Wonder",
+        tulum: "Caribbean History",
+        cenotes: "Nature Experience",
+      },
+      highlights: {
+        islaMujeres: "Catamaran • Snorkeling • Turquoise Waters • Playa Norte",
+        chichenItza: "Mayan Ruins • Cenote • Regional Buffet • Valladolid",
+        tulum: "Clifftop Ruins • Caribbean Views • Mayan Culture",
+        cenotes: "Crystal-Clear Water • Swimming • Nature • Adventure",
+      },
       tours: {
-        islaMujeres: "Catamaran sailing, snorkeling and turquoise waters.",
+        islaMujeres: "A bright Caribbean day across the island's most iconic waters.",
         chichenItza:
-          "One of the New Seven Wonders and a symbol of Mayan heritage.",
-        tulum: "Clifftop ruins overlooking the Caribbean Sea.",
-        cenotes: "Swim in crystal-clear waters surrounded by nature.",
+          "Culture, history and regional flavors in one iconic journey.",
+        tulum: "Ancient ruins, sea views and Mayan stories in a coastal setting.",
+        cenotes: "Freshwater swimming and nature-rich moments in the jungle.",
       },
     },
     featuredExperiences: {
@@ -138,12 +152,26 @@ export const translations = {
       title: "Tours Más Populares",
       subtitle: "Descubre nuestras experiencias más solicitadas en la Riviera Maya.",
       viewExperience: "Ver Experiencia",
+      viewAllPrompt: "Descubre más experiencias inolvidables",
+      viewAllExperiences: "Ver todas las experiencias",
+      badges: {
+        islaMujeres: "Más Vendido",
+        chichenItza: "Maravilla del Mundo",
+        tulum: "Historia del Caribe",
+        cenotes: "Experiencia Natural",
+      },
+      highlights: {
+        islaMujeres: "Catamarán • Snorkel • Aguas Turquesa • Playa Norte",
+        chichenItza: "Ruinas Mayas • Cenote • Buffet Regional • Valladolid",
+        tulum: "Ruinas Frente al Mar • Vistas al Caribe • Cultura Maya",
+        cenotes: "Agua Cristalina • Nado • Naturaleza • Aventura",
+      },
       tours: {
-        islaMujeres: "Navegación en catamarán, snorkel y aguas turquesa.",
+        islaMujeres: "Un día caribeño entre las aguas más icónicas de la isla.",
         chichenItza:
-          "Una de las Nuevas Siete Maravillas y símbolo de la herencia maya.",
-        tulum: "Ruinas frente al mar Caribe desde lo alto de los acantilados.",
-        cenotes: "Nada en aguas cristalinas rodeadas de naturaleza.",
+          "Cultura, historia y sabores regionales en una ruta inolvidable.",
+        tulum: "Ruinas antiguas, vistas al mar e historias mayas frente al Caribe.",
+        cenotes: "Nado en agua dulce y naturaleza en un entorno de selva.",
       },
     },
     featuredExperiences: {
@@ -248,12 +276,26 @@ export const translations = {
       title: "Tours les Plus Populaires",
       subtitle: "Découvrez nos expériences les plus demandées dans la Riviera Maya.",
       viewExperience: "Voir l'Expérience",
+      viewAllPrompt: "Découvrez encore plus d'expériences inoubliables",
+      viewAllExperiences: "Voir toutes les expériences",
+      badges: {
+        islaMujeres: "Meilleure Vente",
+        chichenItza: "Merveille du Monde",
+        tulum: "Histoire des Caraïbes",
+        cenotes: "Expérience Nature",
+      },
+      highlights: {
+        islaMujeres: "Catamaran • Snorkeling • Eaux Turquoise • Playa Norte",
+        chichenItza: "Ruines Mayas • Cenote • Buffet Régional • Valladolid",
+        tulum: "Ruines Face à la Mer • Vue Caraïbe • Culture Maya",
+        cenotes: "Eau Cristalline • Baignade • Nature • Aventure",
+      },
       tours: {
-        islaMujeres: "Catamaran, snorkeling et eaux turquoise.",
+        islaMujeres: "Une journée caribéenne au fil des eaux les plus iconiques de l'île.",
         chichenItza:
-          "L'une des Sept Nouvelles Merveilles et un symbole de l'héritage maya.",
-        tulum: "Ruines sur les falaises face à la mer des Caraïbes.",
-        cenotes: "Nagez dans des eaux cristallines entourées par la nature.",
+          "Culture, histoire et saveurs régionales en une excursion emblématique.",
+        tulum: "Ruines anciennes, vues marines et récits mayas face aux Caraïbes.",
+        cenotes: "Baignade en eau douce et nature dans un décor tropical.",
       },
     },
     featuredExperiences: {

@@ -16,21 +16,15 @@ function isLanguageCode(value: unknown): value is LanguageCode {
 }
 
 export default function WhatsAppButton() {
-  const [language, setLanguage] = useState<LanguageCode>(() => {
-    if (typeof window === "undefined") {
-      return "en";
-    }
+  const [language, setLanguage] = useState<LanguageCode>("en");
 
+  useEffect(() => {
     const savedLanguage = window.localStorage.getItem(storageKey);
 
     if (isLanguageCode(savedLanguage)) {
-      return savedLanguage;
+      window.setTimeout(() => setLanguage(savedLanguage), 0);
     }
 
-    return "en";
-  });
-
-  useEffect(() => {
     const handleLanguageChange = (event: Event) => {
       const customEvent = event as CustomEvent<unknown>;
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Contact from "./Contact";
 import FeaturedExperiences from "./FeaturedExperiences";
 import Footer from "./Footer";
@@ -9,44 +9,51 @@ import Navbar from "./Navbar";
 import PopularTours from "./PopularTours";
 import Testimonials from "./Testimonials";
 import WhyUs from "./WhyUs";
+import { isLanguageCode } from "@/lib/language";
+import { buildLocalizedHref } from "@/lib/links";
 import { LanguageCode } from "./translations";
 
 const storageKey = "mayan-xperience-language";
 
-function isLanguageCode(value: string | null): value is LanguageCode {
-  return value === "en" || value === "es" || value === "fr";
-}
-
 function getUrlLanguage() {
-  if (typeof window === "undefined") {
-    return null;
-  }
-
   return new URLSearchParams(window.location.search).get("lang");
 }
 
-export default function HomePage() {
-  const [language, setLanguage] = useState<LanguageCode>(() => {
-    if (typeof window === "undefined") {
-      return "en";
-    }
+type HomePageProps = {
+  initialLanguage: LanguageCode;
+};
 
+export default function HomePage({ initialLanguage }: HomePageProps) {
+  const [language, setLanguage] = useState<LanguageCode>(initialLanguage);
+  const browserLanguageResolved = useRef(false);
+
+  useEffect(() => {
     const urlLanguage = getUrlLanguage();
 
     if (isLanguageCode(urlLanguage)) {
-      return urlLanguage;
+      browserLanguageResolved.current = true;
+
+      if (urlLanguage !== initialLanguage) {
+        window.setTimeout(() => setLanguage(urlLanguage), 0);
+      }
+
+      return;
     }
 
     const savedLanguage = window.localStorage.getItem(storageKey);
 
     if (isLanguageCode(savedLanguage)) {
-      return savedLanguage;
+      window.setTimeout(() => setLanguage(savedLanguage), 0);
     }
 
-    return "en";
-  });
+    browserLanguageResolved.current = true;
+  }, [initialLanguage]);
 
   useEffect(() => {
+    if (!browserLanguageResolved.current) {
+      return;
+    }
+
     window.localStorage.setItem(storageKey, language);
     document.documentElement.lang = language;
     const url = new URL(window.location.href);
@@ -65,7 +72,15 @@ export default function HomePage() {
 
   return (
     <main>
-      <Navbar language={language} onLanguageChange={setLanguage} />
+      <Navbar
+        language={language}
+        onLanguageChange={setLanguage}
+        menuHrefs={{
+          experiences: buildLocalizedHref("/experiences", language),
+          about: "#about",
+          contact: "#contact",
+        }}
+      />
       <Hero language={language} />
       <PopularTours language={language} />
       <FeaturedExperiences language={language} />
