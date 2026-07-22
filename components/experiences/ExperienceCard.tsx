@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import { buildLocalizedHref } from "@/lib/links";
 import { getProductCardImage, getProductCardImageAlt } from "@/lib/products";
 import type { LanguageCode } from "@/components/translations";
 import type { ExperienceProduct } from "@/types/product";
 
 type ExperienceCardProps = {
+  accentColor?: string;
   categoryLabel?: string;
   comingSoonLabel: string;
   language: LanguageCode;
@@ -16,6 +18,7 @@ type ExperienceCardProps = {
 };
 
 export default function ExperienceCard({
+  accentColor = "#0EA5A8",
   categoryLabel,
   comingSoonLabel,
   language,
@@ -41,6 +44,7 @@ export default function ExperienceCard({
         overflow: "hidden",
         borderRadius: isListing ? "22px" : "18px",
         border: "1px solid rgba(2, 16, 36, 0.08)",
+        borderTop: `3px solid ${accentColor}`,
         backgroundColor: "#ffffff",
         boxShadow: isListing
           ? "0 18px 42px rgba(2, 16, 36, 0.08)"
@@ -141,6 +145,8 @@ export default function ExperienceCard({
                 letterSpacing: "0.04em",
                 textTransform: "uppercase",
                 color: "rgba(255,255,255,0.86)",
+                borderLeft: `3px solid ${accentColor}`,
+                paddingLeft: "8px",
                 textShadow: "0 2px 10px rgba(0,0,0,0.3)",
               }}
             >
@@ -196,12 +202,12 @@ export default function ExperienceCard({
             padding: isListing ? "10px 18px" : "8px 13px",
             borderRadius: "999px",
             border: href
-              ? "1px solid rgba(14, 165, 168, 0.28)"
+              ? `1px solid ${accentColor}47`
               : "1px solid rgba(100, 116, 139, 0.18)",
             backgroundColor: href
-              ? "rgba(14, 165, 168, 0.08)"
+              ? `${accentColor}14`
               : "rgba(100, 116, 139, 0.08)",
-            color: href ? "#047f82" : "#64748b",
+            color: href ? accentColor : "#64748b",
             fontSize: isListing ? "0.94rem" : "0.8rem",
             fontWeight: 800,
           }}
@@ -233,7 +239,8 @@ export default function ExperienceCard({
         display: "block",
         height: "100%",
         textDecoration: "none",
-      }}
+        "--experience-accent": accentColor,
+      } as CSSProperties}
     >
       {card}
     </Link>

@@ -6,6 +6,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     "",
     "/isla-mujeres",
+    "/cozumel",
+    "/isla-contoy",
     "/tulum",
     "/chichen-itza",
     "/cenotes",

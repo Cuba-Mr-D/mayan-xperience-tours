@@ -40,6 +40,7 @@ export default function ProductPageTemplate({
           fill
           style={{
             objectFit: "cover",
+            objectPosition: product.heroImageObjectPosition ?? "center",
           }}
         />
 
@@ -152,10 +153,52 @@ export default function ProductPageTemplate({
         </h2>
 
         <ul style={{ lineHeight: "2" }}>
-          {t.perfectFor.map((item) => (
+        {t.perfectFor.map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
+
+        {t.includedTitle && t.included && (
+          <>
+            <h2 style={{ marginTop: "50px" }}>
+              {t.includedTitle}
+            </h2>
+
+            <ul style={{ lineHeight: "2" }}>
+              {t.included.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        {t.notIncludedTitle && t.notIncluded && (
+          <>
+            <h2 style={{ marginTop: "50px" }}>
+              {t.notIncludedTitle}
+            </h2>
+
+            <ul style={{ lineHeight: "2" }}>
+              {t.notIncluded.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        {t.importantInformationTitle && t.importantInformation && (
+          <>
+            <h2 style={{ marginTop: "50px" }}>
+              {t.importantInformationTitle}
+            </h2>
+
+            <ul style={{ lineHeight: "2" }}>
+              {t.importantInformation.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </>
+        )}
 
         <h2 style={{ marginTop: "50px" }}>
           {t.recommendationTitle}

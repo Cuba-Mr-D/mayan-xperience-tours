@@ -183,6 +183,7 @@ export default function ExperiencesPage({ language }: ExperiencesPageProps) {
         >
           {experienceCategoryConfigs.map((category) => {
             const categoryText = getExperienceCategoryText(category, language);
+            const accentColor = category.accentColor;
             const cards = category.featuredProductSlugs.map((slug) => {
               const catalogProduct = getProductBySlug(slug);
               const experienceProduct =
@@ -222,6 +223,7 @@ export default function ExperiencesPage({ language }: ExperiencesPageProps) {
                       : "linear-gradient(135deg, #021024 0%, #07515c 58%, #0EA5A8 100%)",
                     backgroundPosition: category.bannerPosition || "center",
                     backgroundSize: "cover",
+                    border: `1px solid ${accentColor}33`,
                     boxShadow: "0 18px 44px rgba(2,16,36,0.08)",
                   }}
                 >
@@ -265,8 +267,9 @@ export default function ExperiencesPage({ language }: ExperiencesPageProps) {
                         marginBottom: "12px",
                         padding: "6px 11px",
                         borderRadius: "999px",
-                        backgroundColor: "rgba(14,165,168,0.1)",
-                        color: "#047f82",
+                        border: `1px solid ${accentColor}2E`,
+                        backgroundColor: `${accentColor}14`,
+                        color: accentColor,
                         fontSize: "0.78rem",
                         fontWeight: 850,
                       }}
@@ -300,13 +303,13 @@ export default function ExperiencesPage({ language }: ExperiencesPageProps) {
                       minHeight: "42px",
                       padding: "10px 18px",
                       borderRadius: "999px",
-                      border: "1px solid rgba(14, 165, 168, 0.28)",
-                      backgroundColor: "#0EA5A8",
+                      border: `1px solid ${accentColor}47`,
+                      backgroundColor: accentColor,
                       color: "#ffffff",
                       fontSize: "0.95rem",
                       fontWeight: 800,
                       textDecoration: "none",
-                      boxShadow: "0 10px 24px rgba(14, 165, 168, 0.18)",
+                      boxShadow: `0 10px 24px ${accentColor}2E`,
                     }}
                   >
                     {t.viewMore}
@@ -321,6 +324,7 @@ export default function ExperiencesPage({ language }: ExperiencesPageProps) {
                     {cards.map((card) => (
                       <ExperienceCard
                         key={card.slug}
+                        accentColor={accentColor}
                         categoryLabel={categoryText.name}
                         comingSoonLabel={t.comingSoon}
                         language={language}
@@ -367,7 +371,7 @@ export default function ExperiencesPage({ language }: ExperiencesPageProps) {
           .experiences-start-button:hover,
           .experience-view-more:hover {
             transform: translateY(-2px);
-            background-color: #0b8f92 !important;
+            filter: brightness(0.92) saturate(1.04);
           }
 
           .experiences-start-button:focus-visible,
@@ -385,7 +389,7 @@ export default function ExperiencesPage({ language }: ExperiencesPageProps) {
 
           .experience-card-link:hover .experience-card {
             transform: translateY(-4px) scale(1.01);
-            border-color: rgba(14, 165, 168, 0.22);
+            border-color: var(--experience-accent, #0EA5A8);
             box-shadow: 0 18px 42px rgba(2, 16, 36, 0.1);
           }
 
@@ -403,7 +407,7 @@ export default function ExperiencesPage({ language }: ExperiencesPageProps) {
           }
 
           .experience-card-link:focus-visible {
-            outline: 3px solid #0EA5A8;
+            outline: 3px solid var(--experience-accent, #0EA5A8);
             outline-offset: 4px;
             border-radius: 18px;
           }

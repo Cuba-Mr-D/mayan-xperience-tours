@@ -3,6 +3,7 @@ import type { LanguageCode } from "@/components/translations";
 import type { LocalizedContent } from "@/types/product";
 
 export type ExperienceCategoryConfig = {
+  accentColor: string;
   bannerImage?: string;
   bannerPosition?: string;
   slug: ProductCategoryId;
@@ -16,6 +17,7 @@ export type ExperienceCategoryConfig = {
 export const experienceCategoryConfigs = [
   {
     slug: categoryIds.caribbeanIslands,
+    accentColor: "#14C7C8",
     name: {
       en: "Caribbean Islands",
       es: "Islas del Caribe",
@@ -43,6 +45,7 @@ export const experienceCategoryConfigs = [
   },
   {
     slug: categoryIds.mayanRuinsCulture,
+    accentColor: "#C89B5A",
     name: {
       en: "Mayan Ruins & Culture",
       es: "Ruinas mayas y cultura",
@@ -65,6 +68,7 @@ export const experienceCategoryConfigs = [
   },
   {
     slug: categoryIds.cenotes,
+    accentColor: "#0EA5C6",
     name: {
       en: "Cenotes",
       es: "Cenotes",
@@ -92,6 +96,7 @@ export const experienceCategoryConfigs = [
   },
   {
     slug: categoryIds.adventure,
+    accentColor: "#F97316",
     name: {
       en: "Adventure",
       es: "Aventura",
@@ -119,6 +124,7 @@ export const experienceCategoryConfigs = [
   },
   {
     slug: categoryIds.natureWildlife,
+    accentColor: "#2E8B57",
     name: {
       en: "Nature & Wildlife",
       es: "Naturaleza y vida silvestre",
@@ -145,6 +151,7 @@ export const experienceCategoryConfigs = [
   },
   {
     slug: categoryIds.themeParks,
+    accentColor: "#2563EB",
     name: {
       en: "Theme Parks",
       es: "Parques temáticos",
@@ -167,6 +174,7 @@ export const experienceCategoryConfigs = [
   },
   {
     slug: categoryIds.localExperiences,
+    accentColor: "#F97373",
     name: {
       en: "Local Experiences",
       es: "Experiencias locales",

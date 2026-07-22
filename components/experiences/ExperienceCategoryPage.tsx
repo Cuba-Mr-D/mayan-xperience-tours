@@ -57,6 +57,7 @@ export default function ExperienceCategoryPage({
 }: ExperienceCategoryPageProps) {
   const categoryText = getExperienceCategoryText(category, language);
   const t = categoryCopy[language];
+  const accentColor = category.accentColor;
   const products = getProductsByCategory(category.slug).filter(
     (product): product is ExperienceProduct => product.type === "experience",
   );
@@ -75,7 +76,7 @@ export default function ExperienceCategoryPage({
           backgroundColor: "#021024",
           backgroundImage: category.bannerImage
             ? `linear-gradient(90deg, rgba(2,16,36,0.82) 0%, rgba(2,16,36,0.58) 58%, rgba(2,16,36,0.28) 100%), url("${category.bannerImage}")`
-            : "linear-gradient(135deg, #021024 0%, #06333d 58%, #0e7f84 100%)",
+            : `linear-gradient(135deg, #021024 0%, #06333d 58%, ${accentColor} 100%)`,
           backgroundPosition: category.bannerPosition || "center",
           backgroundSize: "cover",
           color: "#ffffff",
@@ -123,8 +124,8 @@ export default function ExperienceCategoryPage({
               margin: "24px 0 0",
               padding: "7px 12px",
               borderRadius: "999px",
-              border: "1px solid rgba(255,255,255,0.18)",
-              backgroundColor: "rgba(255,255,255,0.1)",
+              border: `1px solid ${accentColor}66`,
+              backgroundColor: `${accentColor}24`,
               color: "rgba(255,255,255,0.9)",
               fontSize: "0.86rem",
               fontWeight: 850,
@@ -142,6 +143,7 @@ export default function ExperienceCategoryPage({
               {products.map((product) => (
                 <ExperienceCard
                   key={product.id}
+                  accentColor={accentColor}
                   categoryLabel={categoryText.name}
                   comingSoonLabel={t.comingSoon}
                   language={language}
@@ -188,7 +190,7 @@ export default function ExperienceCategoryPage({
 
           .experience-card-link:hover .experience-card {
             transform: translateY(-4px) scale(1.01);
-            border-color: rgba(14, 165, 168, 0.22);
+            border-color: var(--experience-accent, #0EA5A8);
             box-shadow: 0 22px 48px rgba(2, 16, 36, 0.1);
           }
 
@@ -201,7 +203,7 @@ export default function ExperienceCategoryPage({
           }
 
           .experience-card-link:focus-visible {
-            outline: 3px solid #0EA5A8;
+            outline: 3px solid var(--experience-accent, #0EA5A8);
             outline-offset: 4px;
             border-radius: 22px;
           }

@@ -73,6 +73,8 @@ export type ProductLocalizedPageContent = {
   included?: string[];
   notIncludedTitle?: string;
   notIncluded?: string[];
+  importantInformationTitle?: string;
+  importantInformation?: string[];
   recommendationTitle: string;
   recommendation: string;
   ctaTitle?: string;
@@ -96,6 +98,7 @@ export type BaseProduct = {
   cardImageAlt?: string;
   cardImageObjectPosition?: string;
   heroImage: string;
+  heroImageObjectPosition?: string;
   heroAlt: string;
   gallery: string[];
   relatedProductIds: string[];
