@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import { LanguageCode, translations } from "./translations";
 
 type FooterProps = {
@@ -9,20 +11,28 @@ export default function Footer({ language }: FooterProps) {
 
   return (
     <footer
+      className="site-footer"
       style={{
-        backgroundColor: "#021024",
+        backgroundColor: "var(--brand-deep-navy)",
         color: "white",
         padding: "50px 20px",
         textAlign: "center",
       }}
     >
-      <h3
-        style={{
-          marginBottom: "15px",
-        }}
+      <Link
+        href="/"
+        aria-label="Mayan Xperience Tours home"
+        className="footerBrandLogo"
       >
-        MAYAN XPERIENCE TOURS
-      </h3>
+        <Image
+          src="/images/branding/mayan-xperience-brand-button.png"
+          alt="Mayan Xperience Tours"
+          width={1536}
+          height={1024}
+          sizes="(max-width: 768px) 210px, 270px"
+          className="footerBrandLogoImage"
+        />
+      </Link>
 
       <p
         style={{

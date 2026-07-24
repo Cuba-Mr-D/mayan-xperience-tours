@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+:root {
+  --brand-dark: #101820;
+  --brand-deep-navy: #071c24;
+  --brand-caribbean: #0b9fb5;
+  --brand-turquoise: #18c7c1;
+  --brand-ocean: #086a80;
+  --brand-gold: #c79a3b;
+  --brand-gold-light: #e2bf68;
+  --brand-cream: #f7f3e8;
+  --brand-white: #ffffff;
+  --brand-text: #17252b;
+  --brand-muted: #66777c;
+}
+
 html,
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -19,4 +33,120 @@ html,
 body {
   overflow-x: hidden;
   width: 100%;
+  color: var(--brand-text);
+  background: var(--brand-white);
+}
+
+::selection {
+  color: var(--brand-deep-navy);
+  background: var(--brand-gold-light);
+}
+
+.mayan-navbar .brandLogoButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 230px;
+  height: 100px;
+  overflow: visible;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 240ms ease, filter 240ms ease;
+}
+
+.footerBrandLogoImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.mayan-navbar .brandLogoButtonImage {
+  display: block;
+  width: 220px;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  transform: translateY(22px);
+  filter: drop-shadow(0 3px 8px rgba(7, 28, 36, 0.3));
+}
+
+.brandLogoButton:hover {
+  filter: brightness(1.08);
+  transform: scale(1.02);
+}
+
+.brandLogoButton:focus-visible,
+.footerBrandLogo:focus-visible,
+.mayan-language-trigger:focus-visible,
+.mayan-menu-trigger:focus-visible,
+.mayan-navigation-menu a:focus-visible,
+.hero-button:focus-visible {
+  outline: 3px solid var(--brand-gold-light);
+  outline-offset: 3px;
+}
+
+.footerBrandLogo {
+  display: block;
+  width: min(270px, 70vw);
+  aspect-ratio: 3 / 2;
+  margin: 0 auto 18px;
+  border-radius: 14px;
+  transition: transform 240ms ease, filter 240ms ease;
+}
+
+.footerBrandLogo:hover {
+  filter: brightness(1.06);
+  transform: scale(1.02);
+}
+
+.site-footer {
+  border-top: 1px solid rgba(199, 154, 59, 0.35);
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: auto 10% 0;
+  height: 1px;
+  z-index: 2;
+  background: linear-gradient(90deg, transparent, var(--brand-gold), transparent);
+}
+
+.popular-tour-card,
+.experience-card {
+  border-color: rgba(8, 106, 128, 0.14) !important;
+  box-shadow: 0 18px 42px rgba(7, 28, 36, 0.09) !important;
+}
+
+.popular-tours-all-link,
+.hero-button-primary {
+  background-color: var(--brand-caribbean) !important;
+  box-shadow: 0 12px 28px rgba(11, 159, 181, 0.25) !important;
+}
+
+@media (max-width: 768px) {
+  .mayan-navbar .brandLogoButton {
+    width: 155px;
+    height: 76px;
+  }
+
+  .mayan-navbar .brandLogoButtonImage {
+    width: 145px;
+    height: auto;
+    transform: translateY(10px);
+  }
+
+  .footerBrandLogo {
+    width: min(210px, 72vw);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brandLogoButton,
+  .footerBrandLogo {
+    transition: none;
+  }
 }

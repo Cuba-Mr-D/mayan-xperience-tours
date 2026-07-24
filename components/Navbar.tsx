@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { LanguageCode, languages, translations } from "./translations";
 
@@ -18,7 +19,6 @@ type NavbarProps = {
 export default function Navbar({
   language,
   onLanguageChange,
-  logoHref,
   menuHrefs = {
     experiences: "/experiences",
     about: "#about",
@@ -71,42 +71,41 @@ export default function Navbar({
       <nav
         className="mayan-navbar"
         style={{
-          position: "fixed",
+          position: "absolute",
           top: 0,
+          left: 0,
           width: "100%",
-          padding: "20px",
+          height: "auto",
+          padding: "12px clamp(24px, 3vw, 40px)",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          backgroundColor: "#021024",
+          background: "transparent",
+          backgroundColor: "transparent",
+          backdropFilter: "none",
+          WebkitBackdropFilter: "none",
           color: "white",
           zIndex: 1000,
           boxSizing: "border-box",
+          borderBottom: "none",
+          boxShadow: "none",
         }}
       >
-        <div
-          className="mayan-navbar-brand"
-          style={{
-            fontWeight: "bold",
-            fontSize: "1.4rem",
-            letterSpacing: "1px",
-            whiteSpace: "nowrap",
-          }}
+        <Link
+          href="/"
+          aria-label="Mayan Xperience Tours home"
+          className="brandLogoButton"
         >
-          {logoHref ? (
-            <a
-              href={logoHref}
-              style={{
-                color: "inherit",
-                textDecoration: "none",
-              }}
-            >
-              MAYAN XPERIENCE
-            </a>
-          ) : (
-            "MAYAN XPERIENCE"
-          )}
-        </div>
+          <Image
+            src="/images/branding/mayan-xperience-navbar-logo-v2.png"
+            alt="Mayan Xperience Tours"
+            width={1283}
+            height={834}
+            preload
+            sizes="(max-width: 768px) 145px, 220px"
+            className="brandLogoButtonImage"
+          />
+        </Link>
 
         <div
           className="mayan-navbar-actions"
@@ -140,7 +139,7 @@ export default function Navbar({
                   padding: "8px 10px",
                   borderRadius: "10px",
                   border: "1px solid #ffffff33",
-                  backgroundColor: "rgba(255,255,255,0.06)",
+                  backgroundColor: "rgba(7, 28, 36, 0.45)",
                   color: "white",
                   cursor: "pointer",
                   display: "flex",
@@ -265,14 +264,21 @@ export default function Navbar({
               setMenuOpen((isOpen) => !isOpen);
               setLanguageMenuOpen(false);
             }}
+            className="mayan-menu-trigger"
             style={{
-              background: "none",
-              border: "none",
+              background: "rgba(7, 28, 36, 0.45)",
+              border: "1px solid #ffffff33",
+              borderRadius: "10px",
               color: "white",
               fontSize: "2rem",
               cursor: "pointer",
-              padding: 0,
+              minWidth: "38px",
+              height: "38px",
+              padding: "4px 8px",
               lineHeight: 1,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
             ☰
@@ -284,7 +290,8 @@ export default function Navbar({
         {`
           @media (max-width: 480px) {
             .mayan-navbar {
-              padding: 18px 12px !important;
+              height: auto !important;
+              padding: 8px 12px !important;
             }
 
             .mayan-navbar-brand {
@@ -319,9 +326,10 @@ export default function Navbar({
 
       {menuOpen && (
         <div
+          className="mayan-navigation-menu"
           style={{
-            position: "fixed",
-            top: "70px",
+            position: "absolute",
+            top: "112px",
             right: "15px",
             backgroundColor: "#021024",
             color: "white",
@@ -371,6 +379,16 @@ export default function Navbar({
           </a>
         </div>
       )}
+
+      <style>
+        {`
+          @media (max-width: 768px) {
+            .mayan-navigation-menu {
+              top: 84px !important;
+            }
+          }
+        `}
+      </style>
     </>
   );
 }

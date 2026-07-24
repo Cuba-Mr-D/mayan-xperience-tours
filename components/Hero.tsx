@@ -27,7 +27,7 @@ export default function Hero({ language }: HeroProps) {
     >
       <Image
         className="hero-image"
-        src="/hero-riviera-maya.jpg"
+        src="/images/hero/holbox-main.webp"
         alt=""
         fill
         preload
